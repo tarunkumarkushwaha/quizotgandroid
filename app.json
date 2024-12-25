@@ -20,13 +20,22 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.tarun_kumar_kushwaha.quizotgandroid"
     },
     "web": {
-    "bundler": "metro"
-  },
+      "bundler": "metro"
+    },
     "plugins": [
       "expo-router"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "1fd916bf-bb14-45a8-a5cd-91b0e246885d"
+      }
+    }
   }
 }

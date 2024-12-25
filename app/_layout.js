@@ -3,12 +3,12 @@ import React, {
   useState,
 } from "react";
 import { Stack } from "expo-router";
-import * as SplashScreen from "expo-splash-screen";
+// import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
 // Prevent the splash screen from auto-hiding before asseet loading is completee.
-SplashScreen.preventAutoHideAsync();
+// SplashScreen.preventAutoHideAsync();
 export const DataContext = createContext();
 
 export default function RootLayout() {
