@@ -3,21 +3,13 @@ import React, { useContext } from "react";
 import {
   View,
   Text,
-  TouchableOpacity,
-  ActivityIndicator,
+  TouchableOpacity
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { DataContext } from "./_layout";
 
-const LoadingScreen = () => (
-  <View style={styles.loadingContainer}>
-    <ActivityIndicator size="large" color="#0000ff" />
-    <Text style={styles.loadingText}>Loading Quizes</Text>
-  </View>
-);
-
 export default function HomeScreen() {
-  const { signIn,isLoading, setIsLoading } = useContext(DataContext);
+  const { signIn } = useContext(DataContext);
 
   const navigation = useNavigation();
 

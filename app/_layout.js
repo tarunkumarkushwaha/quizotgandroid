@@ -2,17 +2,16 @@ import React, {
   createContext,
   useState,
 } from "react";
+import { View, Text, StyleSheet, ActivityIndicator } from "react-native";
 import { Stack } from "expo-router";
-// import * as SplashScreen from "expo-splash-screen";
 import { useEffect } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-// Prevent the splash screen from auto-hiding before asseet loading is completee.
-// SplashScreen.preventAutoHideAsync();
 export const DataContext = createContext();
 
 export default function RootLayout() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [dark, setdark] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [signIn, setsignIn] = useState(true);
   const [result, setresult] = useState({
     TestQuestion: {
@@ -32,43 +31,72 @@ export default function RootLayout() {
   const [timeover, setTimeover] = useState(false);
 
   const storeData = async (key, value) => {
+
     try {
       const stringifiedObject = JSON.stringify(value);
       await AsyncStorage.setItem(key, stringifiedObject);
     } catch (error) {
       console.error("Error saving data:", error);
     }
+
   };
 
   useEffect(() => {
     const saveResult = () => {
       storeData("result", result);
     };
-    !isLoading && saveResult();
+    !loading && saveResult();
   }, [result]);
 
   // console.log(result);
 
+  // const LoadingScreen = () => (
+  //   <View style={styles.loadingContainer}>
+  //     <ActivityIndicator size="large" color="#0000ff" />
+  //     <Text style={styles.loadingText}>Loading Quizes</Text>
+  //   </View>
+  // );
+
+  // if (loading) {
+  //   return <LoadingScreen />;
+  // }
+
   return (
-      <DataContext.Provider
-        value={{
-          isLoading,
-          setIsLoading,
-          start,
-          setstart,
-          timeover,
-          setTimeover,
-          signIn,
-          setsignIn,
-          CustomQuestions,
-          setCustomQuestions,
-          result,
-          setresult,
-          storeData,
-        }}
-      >
-        <Stack screenOptions={{ headerShown: false }}/>
-      </DataContext.Provider>
+    <DataContext.Provider
+      value={{
+        dark,
+        setdark,
+        loading,
+        setLoading,
+        start,
+        setstart,
+        timeover,
+        setTimeover,
+        signIn,
+        setsignIn,
+        CustomQuestions,
+        setCustomQuestions,
+        result,
+        setresult,
+        storeData,
+      }}
+    >
+      <Stack screenOptions={{ headerShown: false }} />
+    </DataContext.Provider>
   );
 }
+
+const styles = StyleSheet.create({
+  loadingContainer: {
+    flex: 1,
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#fff",
+  },
+  loadingText: {
+    marginTop: 10,
+    fontSize: 18,
+    color: "#333",
+  },
+});
 

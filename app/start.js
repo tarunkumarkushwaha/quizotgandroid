@@ -1,24 +1,19 @@
 // import Ionicons from "@expo/vector-icons/Ionicons";
-import { StyleSheet, Image} from "react-native";
+import { StyleSheet, Image } from "react-native";
 import { DataContext } from "./_layout";
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, Button, Alert} from "react-native";
+import { View, Text, Button, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Picker } from "@react-native-picker/picker";
 import { useFocusEffect } from "@react-navigation/native";
 
 export default function Start() {
-  const [loading, setLoading] = useState(false);
 
   const {
-    signIn,
-    CustomQuestions,
+    loading, 
+    setLoading,
     setresult,
     setstart,
-    start,
-    timeover,
-    setTimeover,
-    storeData,
     result,
   } = useContext(DataContext);
   const navigation = useNavigation();
@@ -38,9 +33,9 @@ export default function Start() {
 
   const loadQuestions = async () => {
     try {
+      setLoading(true);
       if (questionModules[result.subject]) {
         const module = await questionModules[result.subject]();
-
         setresult((prevState) => ({
           ...prevState,
           TestQuestion: module.default,
@@ -50,17 +45,19 @@ export default function Start() {
       }
     } catch (error) {
       console.error("Error loading questions:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
-  const startTest = () => {
-    setstart(true);
+  const startTest = async () => {
     setresult((prevState) => ({
       ...prevState,
       correctresponse: 0,
       incorrectresponse: 0,
     }));
-    loadQuestions();
+    await loadQuestions();
+    setstart(true);
     navigation.navigate("test");
   };
 
@@ -81,7 +78,7 @@ export default function Start() {
     }, [])
   );
 
-  return  (
+  return (
     <View style={styles.mainContainer}>
       <Image
         source={{
@@ -113,7 +110,7 @@ export default function Start() {
         </View>
 
         <View style={styles.buttonContainer}>
-          <Button title="Start Test" onPress={startTest} color="#4CAF50" />
+          <Button title={loading ? "Loading..." : "Start Test"} onPress={startTest} color="#4CAF50" />
         </View>
 
         <View style={styles.container}>
@@ -170,9 +167,9 @@ const styles = StyleSheet.create({
   header: {
     fontSize: 24,
     fontWeight: "bold",
-    // color: "#FFD700",
     textAlign: "center",
     marginVertical: 20,
+    color: "#fffff",
   },
 
   settingsContainer: {
@@ -185,24 +182,26 @@ const styles = StyleSheet.create({
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
-    flexDirection: "column",
   },
   label: {
     color: "#ffffff",
     marginBottom: 5,
-    width: 300,
+    textAlign: "center",
   },
   picker: {
-    height: 40,
-    width: 200,
+    height: 50,
+    width: "90%",
     color: "#ffffff",
     backgroundColor: "#555",
     borderRadius: 5,
+    marginVertical: 5,
   },
 
   buttonContainer: {
     marginTop: 20,
+    // alignItems: "center",
   },
+
   notAvailableText: {
     textAlign: "center",
     color: "#cccccc",
@@ -230,7 +229,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   listContainer: {
-    // paddingLeft: 20,
     textAlign: "center",
   },
   listItem: {
