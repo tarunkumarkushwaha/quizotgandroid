@@ -45,7 +45,7 @@ export default function RootLayout() {
     const saveResult = () => {
       storeData("result", result);
     };
-    !loading && saveResult();
+    loading && saveResult();
   }, [result]);
 
   // console.log(result);

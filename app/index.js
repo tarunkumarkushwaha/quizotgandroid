@@ -33,7 +33,7 @@ export default function HomeScreen() {
         <Text style={styles.title}>Welcome to QuizOTG!</Text>
         <Text style={styles.description}>
           Master your knowledge with our diverse range of quizzes and
-          challenges. Choose your subject, and dive into a world of coding
+          challenges. Choose your subject, and dive into a world of 
           quizzes designed to challenge. Start exploring now and unlock your
           potential!
         </Text>

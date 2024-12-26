@@ -9,13 +9,13 @@ const SingleQuestion = ({ question, response, setresponse, disabled }) => {
   return (
     <View style={styles.container}>
       <Text style={styles.questionText}>{question.question}</Text>
-      
+
       <View style={styles.optionContainer}>
         {['option1', 'option2', 'option3', 'option4'].map((option, index) => {
           const optionLabel = question[option];
           const isCorrect = question.correctresponse === optionLabel;
           const isSelected = response === optionLabel;
-          
+
           return (
             <TouchableOpacity
               key={index}
@@ -24,7 +24,7 @@ const SingleQuestion = ({ question, response, setresponse, disabled }) => {
               style={[styles.option, isSelected && styles.selectedOption]}
             >
               <Text style={[
-                styles.optionText, 
+                styles.optionText,
                 disabled ? (isCorrect ? styles.correctText : styles.incorrectText) : styles.defaultText
               ]}>
                 {`${String.fromCharCode(97 + index)}. ${optionLabel}`}
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
     textAlign: 'center',
   },
   optionContainer: {
-    width: '100%',
+    width: '90vw',
   },
   option: {
     flexDirection: 'row',
