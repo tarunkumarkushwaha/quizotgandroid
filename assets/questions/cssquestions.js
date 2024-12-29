@@ -2,7 +2,7 @@ let cssquestions = {
     time: 18, //in min
     questions: [
         {
-            question: "1. CSS means?",
+            question: "CSS means?",
             option1: "Code Style Sheets",
             option2: "Cardcasting Style Sheets",
             option3: "Corcading Style Sheets",
@@ -11,7 +11,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "2. What does CSS stand for?",
+            question: "What does CSS stand for?",
             option1: "Creative Style Sheets",
             option2: "Cascading Style Sheets",
             option3: "Computer Style Sheets",
@@ -20,7 +20,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "3. Which HTML tag is used to define an internal CSS?",
+            question: "Which HTML tag is used to define an internal CSS?",
             option1: "<style>",
             option2: "<script>",
             option3: "<css>",
@@ -29,7 +29,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "4. Which HTML attribute is used to define inline styles?",
+            question: "Which HTML attribute is used to define inline styles?",
             option1: "font",
             option2: "styles",
             option3: "class",
@@ -38,7 +38,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "5. How do you select elements with the class name 'test'?",
+            question: "How do you select elements with the class name 'test'?",
             option1: "#test",
             option2: ".test",
             option3: "test",
@@ -47,7 +47,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "6. Which property is used to change the background color?",
+            question: "Which property is used to change the background color?",
             option1: "color",
             option2: "bgcolor",
             option3: "background-color",
@@ -56,7 +56,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "7. Which CSS property controls text size?",
+            question: "Which CSS property controls text size?",
             option1: "text-style",
             option2: "font-style",
             option3: "font-size",
@@ -65,7 +65,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "8. How do you make the text bold in CSS?",
+            question: "How do you make the text bold in CSS?",
             option1: "font-weight: bold;",
             option2: "text-weight: bold;",
             option3: "font-style: bold;",
@@ -74,7 +74,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "9. How do you add a comment in CSS?",
+            question: "How do you add a comment in CSS?",
             option1: "// this is a comment",
             option2: "/* this is a comment */",
             option3: "<!-- this is a comment -->",
@@ -83,7 +83,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "10. How do you make a list that lists items with square bullets?",
+            question: " How do you make a list that lists items with square bullets?",
             option1: "list-style-type: square;",
             option2: "list-style-type: circle;",
             option3: "list-style-type: disc;",
@@ -92,7 +92,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "11. How do you select elements with the ID 'demo'?",
+            question: " How do you select elements with the ID 'demo'?",
             option1: "#demo",
             option2: ".demo",
             option3: "demo",
@@ -101,7 +101,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "12. What is the default value of the 'position' property?",
+            question: " What is the default value of the 'position' property?",
             option1: "absolute",
             option2: "relative",
             option3: "static",
@@ -110,7 +110,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "13. Which property is used to set the spacing between lines of text?",
+            question: " Which property is used to set the spacing between lines of text?",
             option1: "letter-spacing",
             option2: "line-spacing",
             option3: "line-height",
@@ -119,7 +119,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "14. Which CSS property controls the visibility of an element?",
+            question: " Which CSS property controls the visibility of an element?",
             option1: "display",
             option2: "visibility",
             option3: "opacity",
@@ -128,7 +128,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "15. How do you change the text color of an element in CSS?",
+            question: " How do you change the text color of an element in CSS?",
             option1: "text-color",
             option2: "color",
             option3: "font-color",
@@ -137,7 +137,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "16. Which property is used to change the left margin of an element?",
+            question: " Which property is used to change the left margin of an element?",
             option1: "margin-left",
             option2: "margin-right",
             option3: "padding-left",
@@ -146,7 +146,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "17. How do you make a website responsive in CSS?",
+            question: " How do you make a website responsive in CSS?",
             option1: "Use @responsive",
             option2: "Use @media queries",
             option3: "Use @flexible",
@@ -155,7 +155,7 @@ let cssquestions = {
             time: 1,
         },
         {
-            question: "18. Which property is used to align text to the center?",
+            question: " Which property is used to align text to the center?",
             option1: "text-align: center;",
             option2: "align: center;",
             option3: "vertical-align: center;",

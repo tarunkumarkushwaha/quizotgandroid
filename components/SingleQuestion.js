@@ -6,7 +6,7 @@ const SingleQuestion = ({ question, response, setresponse, disabled }) => {
     setresponse(value);
   };
 
-  return (
+  return question && (
     <View style={styles.container}>
       <Text style={styles.questionText}>{question.question}</Text>
 

@@ -2,7 +2,7 @@ let reasoningquestions = {
     time: 30, // in minutes
     questions: [
         {
-            question: "1. If all roses are flowers and all flowers are plants, then which of the following is true?",
+            question: "If all roses are flowers and all flowers are plants, then which of the following is true?",
             option1: "All roses are plants",
             option2: "All flowers are roses",
             option3: "All plants are flowers",
@@ -11,7 +11,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "2. If the first two statements are true, is the final statement true? 'All cats are animals. All animals are mammals.' 'All cats are mammals.'",
+            question: "If the first two statements are true, is the final statement true? 'All cats are animals. All animals are mammals.' 'All cats are mammals.'",
             option1: "True",
             option2: "False",
             option3: "Not Determinable",
@@ -20,7 +20,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "3. Which number comes next in the series: 1, 4, 9, 16, 25, ___?",
+            question: "Which number comes next in the series: 1, 4, 9, 16, 25, ___?",
             option1: "30",
             option2: "36",
             option3: "40",
@@ -29,7 +29,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "4. If two pencils cost 30 cents, how much would five pencils cost?",
+            question: "If two pencils cost 30 cents, how much would five pencils cost?",
             option1: "50 cents",
             option2: "60 cents",
             option3: "75 cents",
@@ -38,7 +38,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "5. What is the next number in the sequence: 3, 6, 12, 24, 48, ___?",
+            question: "What is the next number in the sequence: 3, 6, 12, 24, 48, ___?",
             option1: "50",
             option2: "96",
             option3: "60",
@@ -47,7 +47,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "6. If all squares are rectangles and all rectangles are parallelograms, which of the following is true?",
+            question: "If all squares are rectangles and all rectangles are parallelograms, which of the following is true?",
             option1: "All squares are parallelograms",
             option2: "All rectangles are squares",
             option3: "All parallelograms are rectangles",
@@ -56,7 +56,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "7. Which of the following is the odd one out?",
+            question: "Which of the following is the odd one out?",
             option1: "Apple",
             option2: "Banana",
             option3: "Grape",
@@ -65,7 +65,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "8. If 5 workers can build a wall in 10 days, how many days will it take for 10 workers to build the same wall?",
+            question: "If 5 workers can build a wall in 10 days, how many days will it take for 10 workers to build the same wall?",
             option1: "5 days",
             option2: "10 days",
             option3: "20 days",
@@ -74,7 +74,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "9. Which of the following is the odd one out?",
+            question: "Which of the following is the odd one out?",
             option1: "Football",
             option2: "Basketball",
             option3: "Cricket",
@@ -83,7 +83,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "10. In a family of 6 members P, Q, R, S, T, and U, T is the father of Q. R is the son of S. P is the sister of S. U is the mother of R. How is S related to Q?",
+            question: " In a family of 6 members P, Q, R, S, T, and U, T is the father of Q. R is the son of S. P is the sister of S. U is the mother of R. How is S related to Q?",
             option1: "Father",
             option2: "Mother",
             option3: "Brother",
@@ -92,7 +92,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "11. What is the missing number in the series: 2, 5, 10, 17, 26, ___?",
+            question: " What is the missing number in the series: 2, 5, 10, 17, 26, ___?",
             option1: "37",
             option2: "34",
             option3: "39",
@@ -101,7 +101,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "12. Which of the following is the odd one out?",
+            question: " Which of the following is the odd one out?",
             option1: "Square",
             option2: "Rectangle",
             option3: "Triangle",
@@ -110,7 +110,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "13. What comes next in the sequence: 1, 4, 9, 16, ___?",
+            question: " What comes next in the sequence: 1, 4, 9, 16, ___?",
             option1: "20",
             option2: "25",
             option3: "24",
@@ -119,7 +119,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "14. Which of the following is the odd one out?",
+            question: " Which of the following is the odd one out?",
             option1: "Dog",
             option2: "Cat",
             option3: "Horse",
@@ -128,7 +128,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "15. If two trains are moving towards each other at the same speed, how long will it take for them to collide if they are initially 200 miles apart?",
+            question: " If two trains are moving towards each other at the same speed, how long will it take for them to collide if they are initially 200 miles apart?",
             option1: "100 hours",
             option2: "50 hours",
             option3: "10 hours",
@@ -137,7 +137,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "16. Which of the following does not belong to the group?",
+            question: " Which of the following does not belong to the group?",
             option1: "Lion",
             option2: "Tiger",
             option3: "Cat",
@@ -146,7 +146,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "17. What is the next number in the series: 1, 1, 2, 3, 5, 8, ___?",
+            question: " What is the next number in the series: 1, 1, 2, 3, 5, 8, ___?",
             option1: "13",
             option2: "10",
             option3: "11",
@@ -155,7 +155,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "18. In a row of children, A is 6th from the left and B is 7th from the right. If the total number of children is 15, what is the position of B from the left?",
+            question: " In a row of children, A is 6th from the left and B is 7th from the right. If the total number of children is 15, what is the position of B from the left?",
             option1: "9th",
             option2: "8th",
             option3: "10th",
@@ -164,7 +164,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "19. Which number will complete the series: 3, 6, 9, 15, 24, ___?",
+            question: " Which number will complete the series: 3, 6, 9, 15, 24, ___?",
             option1: "32",
             option2: "30",
             option3: "28",
@@ -173,7 +173,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "20. In a certain code language, 'GADGET' is written as 'HBEUHF'. How would 'MOBILE' be written in the same code?",
+            question: " In a certain code language, 'GADGET' is written as 'HBEUHF'. How would 'MOBILE' be written in the same code?",
             option1: "NPEMHF",
             option2: "LNPJFD",
             option3: "NPJMGF",
@@ -182,7 +182,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "21. If some students are teachers and all teachers are students, which of the following is true?",
+            question: " If some students are teachers and all teachers are students, which of the following is true?",
             option1: "Some students are not teachers",
             option2: "All teachers are students",
             option3: "All students are teachers",
@@ -191,7 +191,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "22. Which is the next number in the sequence: 1, 4, 9, 16, 25, ___?",
+            question: " Which is the next number in the sequence: 1, 4, 9, 16, 25, ___?",
             option1: "36",
             option2: "45",
             option3: "55",
@@ -200,7 +200,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "23. How many months have 28 days?",
+            question: " How many months have 28 days?",
             option1: "1",
             option2: "2",
             option3: "12",
@@ -209,7 +209,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "24. If five cats can catch five mice in five minutes, how many cats are needed to catch 100 mice in 100 minutes?",
+            question: " If five cats can catch five mice in five minutes, how many cats are needed to catch 100 mice in 100 minutes?",
             option1: "5",
             option2: "100",
             option3: "50",
@@ -218,7 +218,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "25. What is the odd one out?",
+            question: " What is the odd one out?",
             option1: "Banana",
             option2: "Apple",
             option3: "Grapes",
@@ -227,7 +227,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "26. What is the next number in the series: 0, 1, 1, 2, 3, 5, 8, ___?",
+            question: " What is the next number in the series: 0, 1, 1, 2, 3, 5, 8, ___?",
             option1: "13",
             option2: "12",
             option3: "11",
@@ -236,7 +236,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "27. How many sides does a hexagon have?",
+            question: " How many sides does a hexagon have?",
             option1: "4",
             option2: "6",
             option3: "8",
@@ -245,7 +245,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "28. What will come next in the sequence: 10, 20, 40, 80, ___?",
+            question: " What will come next in the sequence: 10, 20, 40, 80, ___?",
             option1: "150",
             option2: "100",
             option3: "160",
@@ -254,7 +254,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "29. In a family, A is the son of B. C is the father of D, and D is the brother of A. How is B related to C?",
+            question: " In a family, A is the son of B. C is the father of D, and D is the brother of A. How is B related to C?",
             option1: "Father",
             option2: "Uncle",
             option3: "Brother-in-law",
@@ -263,7 +263,7 @@ let reasoningquestions = {
             time: 1,
         },
         {
-            question: "30. If a person walks 5 km towards the north, then turns left and walks 3 km, then turns left again and walks 5 km, how far is he from the starting point?",
+            question: " If a person walks 5 km towards the north, then turns left and walks 3 km, then turns left again and walks 5 km, how far is he from the starting point?",
             option1: "0 km",
             option2: "3 km",
             option3: "5 km",

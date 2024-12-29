@@ -2,7 +2,7 @@ let mathquestions = {
     time: 30, // in minutes
     questions: [
         {
-            question: "1. What is the value of (2 + 3) × (4 + 5)?",
+            question: "What is the value of (2 + 3) × (4 + 5)?",
             option1: "45",
             option2: "20",
             option3: "50",
@@ -11,7 +11,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "2. What is the value of 7 × (4 + 6) ÷ 2?",
+            question: "What is the value of 7 × (4 + 6) ÷ 2?",
             option1: "35",
             option2: "28",
             option3: "30",
@@ -20,7 +20,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "3. What is the next number in the sequence: 1, 4, 9, 16, __?",
+            question: "What is the next number in the sequence: 1, 4, 9, 16, __?",
             option1: "20",
             option2: "25",
             option3: "21",
@@ -29,7 +29,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "4. If a rectangle has a length of 10 cm and a diagonal of 13 cm, what is the width?",
+            question: "If a rectangle has a length of 10 cm and a diagonal of 13 cm, what is the width?",
             option1: "12 cm",
             option2: "9 cm",
             option3: "6 cm",
@@ -38,7 +38,7 @@ let mathquestions = {
             time: 2,
         },
         {
-            question: "5. What is the value of (8 ÷ 2) × (2 + 2)?",
+            question: "What is the value of (8 ÷ 2) × (2 + 2)?",
             option1: "16",
             option2: "32",
             option3: "8",
@@ -47,7 +47,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "6. If 3x - 5 = 16, what is the value of x?",
+            question: "If 3x - 5 = 16, what is the value of x?",
             option1: "7",
             option2: "5",
             option3: "6",
@@ -56,7 +56,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "7. What is the value of (3 × 4) + (5 × 6) ÷ 3?",
+            question: "What is the value of (3 × 4) + (5 × 6) ÷ 3?",
             option1: "32",
             option2: "30",
             option3: "28",
@@ -65,7 +65,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "8. If a train travels 60 km in 30 minutes, what is its average speed in km/h?",
+            question: "If a train travels 60 km in 30 minutes, what is its average speed in km/h?",
             option1: "80 km/h",
             option2: "120 km/h",
             option3: "90 km/h",
@@ -74,7 +74,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "9. What is the value of 2² + 3² + 4²?",
+            question: "What is the value of 2² + 3² + 4²?",
             option1: "29",
             option2: "20",
             option3: "25",
@@ -83,7 +83,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "10. What is the next number in the sequence: 2, 6, 12, 20, __?",
+            question: " What is the next number in the sequence: 2, 6, 12, 20, __?",
             option1: "30",
             option2: "25",
             option3: "28",
@@ -92,7 +92,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "11. If 5x = 35, what is the value of x?",
+            question: " If 5x = 35, what is the value of x?",
             option1: "10",
             option2: "7",
             option3: "6",
@@ -101,7 +101,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "12. What is the remainder when 17 is divided by 3?",
+            question: " What is the remainder when 17 is divided by 3?",
             option1: "2",
             option2: "1",
             option3: "3",
@@ -110,7 +110,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "13. What is the area of a triangle with base 10 cm and height 5 cm?",
+            question: " What is the area of a triangle with base 10 cm and height 5 cm?",
             option1: "50 cm²",
             option2: "25 cm²",
             option3: "15 cm²",
@@ -119,7 +119,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "14. What is the value of 2^5?",
+            question: " What is the value of 2^5?",
             option1: "32",
             option2: "64",
             option3: "16",
@@ -128,7 +128,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "15. If a person walks 5 km north, then turns right and walks 5 km, then turns right again and walks 5 km, how far is he from the starting point?",
+            question: " If a person walks 5 km north, then turns right and walks 5 km, then turns right again and walks 5 km, how far is he from the starting point?",
             option1: "5 km",
             option2: "7 km",
             option3: "10 km",
@@ -137,7 +137,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "16. If the sum of three consecutive numbers is 24, what is the smallest number?",
+            question: " If the sum of three consecutive numbers is 24, what is the smallest number?",
             option1: "7",
             option2: "8",
             option3: "6",
@@ -146,7 +146,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "17. What is the square root of 81?",
+            question: " What is the square root of 81?",
             option1: "9",
             option2: "8",
             option3: "7",
@@ -155,7 +155,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "18. What is the value of 5 × (2 + 3) ÷ 5?",
+            question: " What is the value of 5 × (2 + 3) ÷ 5?",
             option1: "2",
             option2: "5",
             option3: "3",
@@ -164,7 +164,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "19. What is the value of 25% of 200?",
+            question: " What is the value of 25% of 200?",
             option1: "25",
             option2: "50",
             option3: "75",
@@ -173,7 +173,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "20. If a box contains 8 red balls, 5 green balls, and 7 blue balls, what is the probability of drawing a green ball?",
+            question: " If a box contains 8 red balls, 5 green balls, and 7 blue balls, what is the probability of drawing a green ball?",
             option1: "5/20",
             option2: "5/10",
             option3: "5/15",
@@ -182,7 +182,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "21. What is the value of 12 × (5 - 2)?",
+            question: " What is the value of 12 × (5 - 2)?",
             option1: "36",
             option2: "30",
             option3: "40",
@@ -191,7 +191,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "22. What is the product of the first five prime numbers?",
+            question: " What is the product of the first five prime numbers?",
             option1: "2310",
             option2: "210",
             option3: "120",
@@ -200,7 +200,7 @@ let mathquestions = {
             time: 2,
         },
         {
-            question: "23. What is the value of 7 × (3 + 4)?",
+            question: " What is the value of 7 × (3 + 4)?",
             option1: "49",
             option2: "56",
             option3: "63",
@@ -209,7 +209,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "24. What is the area of a circle with a radius of 7 cm? (Use π = 3.14)",
+            question: " What is the area of a circle with a radius of 7 cm? (Use π = 3.14)",
             option1: "153.86 cm²",
             option2: "141.96 cm²",
             option3: "156.98 cm²",
@@ -218,7 +218,7 @@ let mathquestions = {
             time: 2,
         },
         {
-            question: "25. What is the sum of the angles of a hexagon?",
+            question: " What is the sum of the angles of a hexagon?",
             option1: "720°",
             option2: "360°",
             option3: "540°",
@@ -227,7 +227,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "26. What is the perimeter of a square with side 4 cm?",
+            question: " What is the perimeter of a square with side 4 cm?",
             option1: "16 cm",
             option2: "12 cm",
             option3: "14 cm",
@@ -236,7 +236,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "27. How much would 5 liters of water weigh in kilograms?",
+            question: " How much would 5 liters of water weigh in kilograms?",
             option1: "10 kg",
             option2: "5 kg",
             option3: "7 kg",
@@ -245,7 +245,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "28. What is the average of the first 10 natural numbers?",
+            question: " What is the average of the first 10 natural numbers?",
             option1: "5.5",
             option2: "6",
             option3: "5",
@@ -254,7 +254,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "29. What is the value of 3³?",
+            question: " What is the value of 3³?",
             option1: "9",
             option2: "27",
             option3: "18",
@@ -263,7 +263,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "30. What is the smallest prime number greater than 10?",
+            question: " What is the smallest prime number greater than 10?",
             option1: "11",
             option2: "13",
             option3: "17",

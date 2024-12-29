@@ -2,7 +2,7 @@ let sciencequestions = {
     time: 30, // in minutes
     questions: [
         {
-            question: "1. What is the chemical formula for water?",
+            question: "What is the chemical formula for water?",
             option1: "H2O",
             option2: "O2",
             option3: "CO2",
@@ -11,7 +11,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "2. What is the speed of light in a vacuum?",
+            question: "What is the speed of light in a vacuum?",
             option1: "300,000 km/s",
             option2: "150,000 km/s",
             option3: "500,000 km/s",
@@ -20,7 +20,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "3. What planet is known as the Red Planet?",
+            question: "What planet is known as the Red Planet?",
             option1: "Venus",
             option2: "Mars",
             option3: "Jupiter",
@@ -29,7 +29,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "4. What is the powerhouse of the cell?",
+            question: "What is the powerhouse of the cell?",
             option1: "Nucleus",
             option2: "Ribosome",
             option3: "Mitochondria",
@@ -38,7 +38,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "5. Which gas do plants primarily use for photosynthesis?",
+            question: "Which gas do plants primarily use for photosynthesis?",
             option1: "Oxygen",
             option2: "Nitrogen",
             option3: "Carbon dioxide",
@@ -47,7 +47,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "6. Who proposed the theory of relativity?",
+            question: "Who proposed the theory of relativity?",
             option1: "Isaac Newton",
             option2: "Albert Einstein",
             option3: "Galileo Galilei",
@@ -56,7 +56,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "7. What is the largest organ in the human body?",
+            question: "What is the largest organ in the human body?",
             option1: "Liver",
             option2: "Brain",
             option3: "Skin",
@@ -65,7 +65,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "8. What is the boiling point of water at sea level?",
+            question: "What is the boiling point of water at sea level?",
             option1: "90°C",
             option2: "100°C",
             option3: "120°C",
@@ -74,7 +74,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "9. Which planet has the most moons?",
+            question: "Which planet has the most moons?",
             option1: "Jupiter",
             option2: "Saturn",
             option3: "Uranus",
@@ -83,7 +83,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "10. What is the smallest unit of matter?",
+            question: " What is the smallest unit of matter?",
             option1: "Molecule",
             option2: "Atom",
             option3: "Electron",
@@ -92,7 +92,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "11. Which scientist developed the laws of motion?",
+            question: " Which scientist developed the laws of motion?",
             option1: "Isaac Newton",
             option2: "Albert Einstein",
             option3: "Marie Curie",
@@ -101,7 +101,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "12. What type of blood cells fight infections?",
+            question: " What type of blood cells fight infections?",
             option1: "Red blood cells",
             option2: "White blood cells",
             option3: "Platelets",
@@ -110,7 +110,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "13. What is the most abundant gas in Earth's atmosphere?",
+            question: " What is the most abundant gas in Earth's atmosphere?",
             option1: "Oxygen",
             option2: "Carbon dioxide",
             option3: "Nitrogen",
@@ -119,7 +119,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "14. What is the study of plants called?",
+            question: " What is the study of plants called?",
             option1: "Botany",
             option2: "Zoology",
             option3: "Geology",
@@ -128,7 +128,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "15. What is the pH value of pure water?",
+            question: " What is the pH value of pure water?",
             option1: "7",
             option2: "8",
             option3: "6",
@@ -137,7 +137,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "16. What is the chemical symbol for gold?",
+            question: " What is the chemical symbol for gold?",
             option1: "Au",
             option2: "Ag",
             option3: "Fe",
@@ -146,7 +146,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "17. What is the most common type of star in the universe?",
+            question: " What is the most common type of star in the universe?",
             option1: "Red dwarf",
             option2: "White dwarf",
             option3: "Blue giant",
@@ -155,7 +155,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "18. What is the SI unit of force?",
+            question: " What is the SI unit of force?",
             option1: "Newton",
             option2: "Joule",
             option3: "Pascal",
@@ -164,7 +164,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "19. What is the name of the process by which plants lose water through their leaves?",
+            question: " What is the name of the process by which plants lose water through their leaves?",
             option1: "Respiration",
             option2: "Transpiration",
             option3: "Osmosis",
@@ -173,7 +173,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "20. What is the chemical formula for table salt?",
+            question: " What is the chemical formula for table salt?",
             option1: "NaCl",
             option2: "KCl",
             option3: "NaHCO3",
@@ -182,7 +182,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "21. What is the primary source of energy for the Earth?",
+            question: " What is the primary source of energy for the Earth?",
             option1: "The Sun",
             option2: "The Moon",
             option3: "Geothermal energy",
@@ -191,7 +191,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "22. What is the hardest natural substance on Earth?",
+            question: " What is the hardest natural substance on Earth?",
             option1: "Diamond",
             option2: "Gold",
             option3: "Iron",
@@ -200,7 +200,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "23. What is the main function of red blood cells?",
+            question: " What is the main function of red blood cells?",
             option1: "Fighting infections",
             option2: "Carrying oxygen",
             option3: "Clotting blood",
@@ -209,7 +209,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "24. What type of rock is formed by cooling magma or lava?",
+            question: " What type of rock is formed by cooling magma or lava?",
             option1: "Sedimentary rock",
             option2: "Igneous rock",
             option3: "Metamorphic rock",
@@ -218,7 +218,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "25. What is the largest planet in our solar system?",
+            question: " What is the largest planet in our solar system?",
             option1: "Earth",
             option2: "Saturn",
             option3: "Jupiter",
@@ -227,7 +227,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "26. What is the process by which cells divide called?",
+            question: " What is the process by which cells divide called?",
             option1: "Photosynthesis",
             option2: "Mitosis",
             option3: "Fission",
@@ -236,7 +236,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "27. What is the smallest planet in our solar system?",
+            question: " What is the smallest planet in our solar system?",
             option1: "Mars",
             option2: "Mercury",
             option3: "Venus",
@@ -245,7 +245,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "28. What is the process by which plants make their own food?",
+            question: " What is the process by which plants make their own food?",
             option1: "Respiration",
             option2: "Osmosis",
             option3: "Photosynthesis",
@@ -254,7 +254,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "29. What is the most abundant element in the universe?",
+            question: " What is the most abundant element in the universe?",
             option1: "Oxygen",
             option2: "Hydrogen",
             option3: "Carbon",
@@ -263,7 +263,7 @@ let sciencequestions = {
             time: 1,
         },
         {
-            question: "30. What is the study of the universe called?",
+            question: " What is the study of the universe called?",
             option1: "Geology",
             option2: "Biology",
             option3: "Astronomy",

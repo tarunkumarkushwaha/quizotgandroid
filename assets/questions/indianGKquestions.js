@@ -1,7 +1,7 @@
 let indianGKQuestions = {
     time: 30, // in minutes
     questions: [{
-        question: "1. Prime minister of India is ____?",
+        question: "Prime minister of India is ____?",
         option1: "Rahul Gandhi",
         option2: "me",
         option3: "Narendra modi",
@@ -10,7 +10,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "2. Which river is considered the lifeline of the Indian state of Jammu and Kashmir?",
+        question: "Which river is considered the lifeline of the Indian state of Jammu and Kashmir?",
         option1: "Ganga",
         option2: "Yamuna",
         option3: "Brahmaputra",
@@ -19,7 +19,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "3. Who was the first woman Prime Minister of India?",
+        question: "Who was the first woman Prime Minister of India?",
         option1: "Indira Gandhi",
         option2: "Sonia Gandhi",
         option3: "Mayawati",
@@ -28,7 +28,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "4. What is capital of bihar?",
+        question: "What is capital of bihar?",
         option1: "I am capital",
         option2: "Patna",
         option3: "Gaya",
@@ -37,7 +37,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "5. The Red Fort is located in which Indian city?",
+        question: "The Red Fort is located in which Indian city?",
         option1: "Mumbai",
         option2: "Kolkata",
         option3: "New Delhi",
@@ -46,7 +46,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "6. Who wrote the Indian national anthem, 'Jana Gana Mana'?",
+        question: "Who wrote the Indian national anthem, 'Jana Gana Mana'?",
         option1: "Rabindranath Tagore",
         option2: "Mahatma Gandhi",
         option3: "Subhas Chandra Bose",
@@ -55,7 +55,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "7. What is the currency of India?",
+        question: "What is the currency of India?",
         option1: "Rupee",
         option2: "Taka",
         option3: "Rupiah",
@@ -64,7 +64,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "8. Who is known as the 'Father of the Indian Nation'?",
+        question: "Who is known as the 'Father of the Indian Nation'?",
         option1: "Jawaharlal Nehru",
         option2: "Mahatma Gandhi",
         option3: "Sardar Vallabhbhai Patel",
@@ -73,7 +73,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "9. Which is the highest civilian award in India?",
+        question: "Which is the highest civilian award in India?",
         option1: "Padma Vibhushan",
         option2: "Padma Shri",
         option3: "Bharat Ratna",
@@ -82,7 +82,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "10. Who composed the Indian national song 'Vande Mataram'?",
+        question: " Who composed the Indian national song 'Vande Mataram'?",
         option1: "Sarojini Naidu",
         option2: "Bankim Chandra Chattopadhyay",
         option3: "Rabindranath Tagore",
@@ -91,7 +91,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "11. Which is the longest river in India?",
+        question: " Which is the longest river in India?",
         option1: "Ganga",
         option2: "Yamuna",
         option3: "Brahmaputra",
@@ -100,7 +100,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "12. The Indian Space Research Organisation (ISRO) was founded in which year?",
+        question: " The Indian Space Research Organisation (ISRO) was founded in which year?",
         option1: "1969",
         option2: "1972",
         option3: "1962",
@@ -109,7 +109,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "13. Which Indian state is known as the 'Spice Garden of India'?",
+        question: " Which Indian state is known as the 'Spice Garden of India'?",
         option1: "Kerala",
         option2: "Karnataka",
         option3: "Gujarat",
@@ -118,7 +118,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "14. Who is the first woman to climb Mount Everest from India?",
+        question: " Who is the first woman to climb Mount Everest from India?",
         option1: "Arunima Sinha",
         option2: "Bachendri Pal",
         option3: "Santosh Yadav",
@@ -127,7 +127,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "15. Which is the largest freshwater lake in India?",
+        question: " Which is the largest freshwater lake in India?",
         option1: "Chilika Lake",
         option2: "Wular Lake",
         option3: "Dal Lake",
@@ -136,7 +136,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "16. What is the name of the highest peak in India?",
+        question: " What is the name of the highest peak in India?",
         option1: "Mount Everest",
         option2: "Kangchenjunga",
         option3: "Nanda Devi",
@@ -145,7 +145,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "17. Which city is known as the 'Pink City' of India?",
+        question: " Which city is known as the 'Pink City' of India?",
         option1: "Jaipur",
         option2: "Agra",
         option3: "Udaipur",
@@ -154,7 +154,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "18. Who was the first Indian woman to win an Olympic medal?",
+        question: " Who was the first Indian woman to win an Olympic medal?",
         option1: "P.T. Usha",
         option2: "Saina Nehwal",
         option3: "Karnam Malleswari",
@@ -163,7 +163,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "19. Which Indian state is known as the 'Land of Forests'?",
+        question: " Which Indian state is known as the 'Land of Forests'?",
         option1: "Assam",
         option2: "Madhya Pradesh",
         option3: "Uttarakhand",
@@ -172,7 +172,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "20. Who was the first Indian woman to win the Miss World title?",
+        question: " Who was the first Indian woman to win the Miss World title?",
         option1: "Sushmita Sen",
         option2: "Aishwarya Rai",
         option3: "Priyanka Chopra",
@@ -181,7 +181,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "21. Capital of Bihar is _____?",
+        question: " Capital of Bihar is _____?",
         option1: "Punjab",
         option2: "Patna",
         option3: "Patliputra",
@@ -190,7 +190,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "22. Who is known as the Father of the Indian Constitution?",
+        question: " Who is known as the Father of the Indian Constitution?",
         option1: "Mahatma Gandhi",
         option2: "Jawaharlal Nehru",
         option3: "B.R. Ambedkar",
@@ -199,7 +199,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "23. What is the capital city of Bhutan??",
+        question: " What is the capital city of Bhutan??",
         option1: "Punjab",
         option2: "Haryana",
         option3: "Thimphu",
@@ -208,7 +208,7 @@ let indianGKQuestions = {
         time: 1
     },
     {
-        question: "24. What is the capital city of Nepal?",
+        question: " What is the capital city of Nepal?",
         option1: "Kathmandu",
         option2: "Pokhara",
         option3: "Biratnagar",
@@ -218,7 +218,7 @@ let indianGKQuestions = {
     },
 
     {
-        question: "25. Mount Everest, the world's highest mountain peak, is located in which country?",
+        question: " Mount Everest, the world's highest mountain peak, is located in which country?",
         option1: "India",
         option2: "China",
         option3: "Nepal",
@@ -227,7 +227,7 @@ let indianGKQuestions = {
         time: 1
       },
       {
-        question: "26. Which planet is known as the morning star or evening star?",
+        question: " Which planet is known as the morning star or evening star?",
         option1: "Mars",
         option2: "Venus",
         option3: "Mercury",
@@ -236,7 +236,7 @@ let indianGKQuestions = {
         time: 1
       },
       {
-        question: "27. Who is the author of the Harry Potter book series?",
+        question: " Who is the author of the Harry Potter book series?",
         option1: "J.K. Rowling",
         option2: "Stephen King",
         option3: "Dan Brown",
@@ -245,7 +245,7 @@ let indianGKQuestions = {
         time: 1
       },
       {
-        question: "28. What is the largest desert in the world?",
+        question: " What is the largest desert in the world?",
         option1: "Sahara Desert",
         option2: "Gobi Desert",
         option3: "Arabian Desert",
@@ -254,7 +254,7 @@ let indianGKQuestions = {
         time: 1
       },
       {
-        question: "29. Which animal is known as the 'Ship of the Desert'?",
+        question: " Which animal is known as the 'Ship of the Desert'?",
         option1: "Camel",
         option2: "Horse",
         option3: "Donkey",
@@ -263,7 +263,7 @@ let indianGKQuestions = {
         time: 1
       },
       {
-        question: "30. What is the national bird of the United States?",
+        question: " What is the national bird of the United States?",
         option1: "Eagle",
         option2: "Bald Eagle",
         option3: "Hawk",

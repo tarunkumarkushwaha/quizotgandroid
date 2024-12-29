@@ -4,7 +4,9 @@ import { useNavigation } from "@react-navigation/native";
 import { Audio } from "expo-av";
 import SingleQuestion from "../components/SingleQuestion";
 import Timer from "../components/Timer";
-import { DataContext } from "./_layout";
+import { useSelector, useDispatch } from "react-redux";
+import { setstart, setaddResult, incrementInCorrectResponse, incrementCorrectResponse } from "../store/quizSlice";
+
 import { useFocusEffect } from "@react-navigation/native";
 
 const Test = () => {
@@ -12,7 +14,10 @@ const Test = () => {
   const [response, setresponse] = useState("");
   const [disabled, setDisabled] = useState(false);
   const [remainingTime, setRemainingTime] = useState(0);
-  const { result, setresult, signIn, setstart, start } = useContext(DataContext);
+  const result = useSelector((state) => state.quiz.result);
+  const signIn = useSelector((state) => state.quiz.signIn);
+  const start = useSelector((state) => state.quiz.start);
+  const dispatch = useDispatch();
 
   const resetState = () => {
     setQuestionNO(0);
@@ -20,19 +25,11 @@ const Test = () => {
     setDisabled(false);
   };
 
-    useFocusEffect(
-      React.useCallback(() => {
-        resetState();
-      }, [])
-    );
-
-  // useEffect(() => {
-  //   resetState();
-  // }, []);
-
-  // console.log(questionNO,
-  //   response,
-  //   disabled)
+  useFocusEffect(
+    React.useCallback(() => {
+      resetState();
+    }, [])
+  );
 
   const navigation = useNavigation();
 
@@ -52,19 +49,12 @@ const Test = () => {
 
   const checkAnsQuick = () => {
     if (result.TestQuestion.questions[questionNO].correctresponse === response) {
-      setresult((prevState) => ({
-        ...prevState,
-        correctresponse: prevState.correctresponse + 1,
-      }));
+      dispatch(incrementCorrectResponse());
 
       playSound(trueSound);
       Alert.alert("Correct", "Your answer is correct!");
     } else {
-      setresult((prevState) => ({
-        ...prevState,
-        incorrectresponse: prevState.incorrectresponse + 1,
-      }));
-
+      dispatch(incrementInCorrectResponse());
       playSound(falseSound);
       Alert.alert("Incorrect", "Your answer is incorrect.");
     }
@@ -86,25 +76,14 @@ const Test = () => {
     if (!disabled) {
       const isCorrect =
         response === result.TestQuestion.questions[questionNO].correctresponse;
-
-      setresult((prevState) => ({
-        ...prevState,
-        correctresponse: isCorrect
-          ? prevState.correctresponse + 1
-          : prevState.correctresponse,
-        incorrectresponse: !isCorrect
-          ? prevState.incorrectresponse + 1
-          : prevState.incorrectresponse,
-      }));
+      isCorrect ? dispatch(incrementCorrectResponse()) : dispatch(incrementInCorrectResponse())
     }
   };
 
   const updateTimeLeft = (remainingTime) => {
     const totalTime = result.TestQuestion.time * 60;
     const elapsedTimeInSeconds = totalTime - remainingTime;
-
-    setresult((prevState) => ({
-      ...prevState,
+    dispatch(setaddResult({
       timeLeft: {
         min: Math.floor(remainingTime / 60),
         sec: remainingTime % 60,

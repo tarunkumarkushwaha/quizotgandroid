@@ -1,24 +1,23 @@
-import React, { useRef, useContext, useState } from "react";
+import React, {  useState } from "react";
 import { Image, View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import { DataContext } from "./_layout";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useFocusEffect } from "@react-navigation/native";
-import { useNavigation } from "@react-navigation/native";
+// import { useNavigation } from "@react-navigation/native";
+import { useSelector, useDispatch } from "react-redux";
+import { setstart, setaddResult, resetState, saveResultToStorage } from "../store/quizSlice";
+import { useRouter } from "expo-router";
 
 const Result = () => {
   const [haspastresult, sethaspastresult] = useState(false);
   const [pastresult, setpastresult] = useState({});
-  const navigation = useNavigation();
+  // const navigation = useNavigation();
+  const router = useRouter();
 
-  const {
-    result,
-    dark,
-    setresult,
-    CustomQuestions,
-    signIn,
-    setstart,
-    storeData,
-  } = useContext(DataContext);
+  const result = useSelector((state) => state.quiz.result);
+  const signIn = useSelector((state) => state.quiz.signIn);
+  // const start = useSelector((state) => state.quiz.start);
+  const dark = useSelector((state) => state.quiz.dark);
+  const dispatch = useDispatch();
 
   useFocusEffect(
     React.useCallback(() => {
@@ -30,16 +29,20 @@ const Result = () => {
       getPastResult();
 
       if (result.TestQuestion.questions.length >= 1) {
-        storeData("result", result);
-        setstart(false);
+        dispatch(saveResultToStorage({key:"result", value:result}));
+        dispatch(setstart(false));
       }
 
       return () => {
+        let key = "pastresult"
         result.TestQuestion.questions.length >= 1 &&
-          storeData("pastresult", result);
+          dispatch(saveResultToStorage({ key: key, value: result }));
+
       };
     }, [])
   );
+
+  console.log(pastresult.TestQuestion.questions.length,"past result")
 
   return (
     <View style={[styles.container]}>
@@ -129,13 +132,18 @@ const Result = () => {
                       Percentage:{" "}
                       <Text style={styles.value}>
                         {parseFloat(
-                          (
-                            (pastresult.correctresponse /
-                              pastresult.TestQuestion.questions.length) *
-                            100
+                          ((pastresult.correctresponse / pastresult.TestQuestion.questions.length) * 100
                           ).toFixed(2)
                         )}
                         %
+                      </Text>
+                    </Text>
+                  </View>
+                  <View style={styles.resultText}>
+                    <Text style={{ color: !dark ? "#ffffff" : "#333" }}>
+                    correct response out of questions:{" "}
+                      <Text style={styles.value}>
+                        {`${pastresult.correctresponse} / ${pastresult.TestQuestion.questions.length}`}
                       </Text>
                     </Text>
                   </View>
@@ -232,7 +240,13 @@ const Result = () => {
       )}
 
       <TouchableOpacity
-        onPress={() => navigation.navigate("index")}
+        onPress={() => {
+          // navigation.navigate("index")
+          router.dismissAll()
+          dispatch(resetState())
+          // router.replace("/");
+          // resetContext()
+        }}
         style={styles.startTestButton}
       >
         <Text style={styles.buttonText}>Restart Test</Text>

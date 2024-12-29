@@ -1,16 +1,15 @@
 import { Image, StyleSheet } from "react-native";
-import React, { useContext } from "react";
+import React from "react";
 import {
   View,
   Text,
   TouchableOpacity
 } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { DataContext } from "./_layout";
+import { useSelector } from "react-redux";
 
 export default function HomeScreen() {
-  const { signIn } = useContext(DataContext);
-
+  const signIn = useSelector((state) => state.quiz.signIn);
   const navigation = useNavigation();
 
   const TestSetting = () => {

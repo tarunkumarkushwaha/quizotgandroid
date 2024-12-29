@@ -1,9 +1,13 @@
 import React, { useContext, useEffect, useState } from "react";
 import { View, Text, StyleSheet } from "react-native";
-import { DataContext } from "../app/_layout";
+import { useSelector, useDispatch } from "react-redux";
+import { setstart } from "../store/quizSlice";
+
 
 const Timer = ({ finalSubmit, remainingTime, setRemainingTime }) => {
-  const { start, setstart, result } = useContext(DataContext);
+  const result = useSelector((state) => state.quiz.result);
+  const start = useSelector((state) => state.quiz.start);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (start) {
@@ -19,7 +23,7 @@ const Timer = ({ finalSubmit, remainingTime, setRemainingTime }) => {
       setRemainingTime((prev) => {
         if (prev <= 1) {
           clearInterval(timerInterval);
-          setstart(false);
+          dispatch(setstart(false));
           finalSubmit(remainingTime);
           return 0;
         }

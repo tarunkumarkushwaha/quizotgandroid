@@ -2,7 +2,7 @@ const wordpressquestions = {
     time: 50, //in minutes
     questions: [
         {
-            question: "1. WordPress is a ___?",
+            question: "WordPress is a ___?",
             option1: "Content Management System",
             option2: "Blogger",
             option3: "Programming language",
@@ -12,7 +12,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "2. CMS stands for ___?",
+            question: "CMS stands for ___?",
             option1: "Content Management System",
             option2: "Creator Management System",
             option3: "Content Manager Source",
@@ -22,7 +22,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "3. Which type of data can be stored in WordPress as media?",
+            question: "Which type of data can be stored in WordPress as media?",
             option1: "Text",
             option2: "Document",
             option3: "Music",
@@ -32,7 +32,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "4. When was WordPress released?",
+            question: "When was WordPress released?",
             option1: "May 2003",
             option2: "July 2003",
             option3: "May 2001",
@@ -42,7 +42,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "5. Is WordPress free to use?",
+            question: "Is WordPress free to use?",
             option1: "Yes",
             option2: "No",
             option3: "it is very costly only elon musk can efford it",
@@ -52,7 +52,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "6. Which of these is a feature of WordPress?",
+            question: "Which of these is a feature of WordPress?",
             option1: "User Management",
             option2: "Provides tools for Search Engine Optimization",
             option3: "Contains multiple themes to style our website",
@@ -62,7 +62,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "7. Which of these is an advantage of WordPress?",
+            question: "Which of these is an advantage of WordPress?",
             option1: "PHP requirement",
             option2: "SEO tools make on-site SEO easier",
             option3: "Frequent updates require multiple backup copies.",
@@ -72,7 +72,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "8. Which of these is a free WordPress domain name provided to WordPress.com users?",
+            question: "Which of these is a free WordPress domain name provided to WordPress.com users?",
             option1: "yoursite.WordPress.org",
             option2: "Yoursite.org",
             option3: "yousite.WordPress.com",
@@ -82,7 +82,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "9. Can you get a custom name using WordPress.com?",
+            question: "Can you get a custom name using WordPress.com?",
             option1: "Yes",
             option2: "No",
             option3: "i dont know",
@@ -92,7 +92,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "10. Which WordPress type can be installed on a user's computer?",
+            question: " Which WordPress type can be installed on a user's computer?",
             option1: "WordPress.com",
             option2: "WordPress.org",
             option3: "Both",
@@ -102,7 +102,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "11. Which database is required by WordPress?",
+            question: " Which database is required by WordPress?",
             option1: "MySQL",
             option2: "MongoDB",
             option3: "RDB",
@@ -112,7 +112,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "12. Which of these fields is not required to be filled while first installing the WordPress?",
+            question: " Which of these fields is not required to be filled while first installing the WordPress?",
             option1: "Site Title",
             option2: "Username",
             option3: "Post",
@@ -122,7 +122,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "13. The Quick draft section in WordPress is used for ___?",
+            question: " The Quick draft section in WordPress is used for ___?",
             option1: "Creating mini-posts with titles and small details",
             option2: "Editing posts",
             option3: "Creating pages",
@@ -132,7 +132,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "14. Which of these is displayed using the WordPress news widget?",
+            question: " Which of these is displayed using the WordPress news widget?",
             option1: "Software version",
             option2: "Software updates",
             option3: "Alerts",
@@ -142,7 +142,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "15. Which of these is not seen on the WordPress dashboard?",
+            question: " Which of these is not seen on the WordPress dashboard?",
             option1: "Site traffic",
             option2: "Menu options",
             option3: "Welcome text",
@@ -152,7 +152,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "16. Which of these are general settings of WordPress?",
+            question: " Which of these are general settings of WordPress?",
             option1: "Site title",
             option2: "Data format",
             option3: "Time format",
@@ -162,7 +162,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "17. Can writing settings be changed in WordPress?",
+            question: " Can writing settings be changed in WordPress?",
             option1: "Yes",
             option2: "No",
             option3: "i dont know",
@@ -172,7 +172,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "18. What is the default post Category for WordPress?",
+            question: " What is the default post Category for WordPress?",
             option1: "The first category added on WordPress",
             option2: "Uncategorized",
             option3: "No category",
@@ -182,7 +182,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "19. What content of post can be displayed in the feed?",
+            question: " What content of post can be displayed in the feed?",
             option1: "Full post",
             option2: "Summary of post",
             option3: "Optional both A and B",
@@ -192,7 +192,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "20. What task does search engine visibility performs in WordPress?",
+            question: " What task does search engine visibility performs in WordPress?",
             option1: "Removes site visibility on Google",
             option2: "Discourage search engines from indexing the site",
             option3: "Both",
@@ -202,7 +202,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "21. What is the current version of WordPress (Feb 2022)?",
+            question: " What is the current version of WordPress (Feb 2022)?",
             option1: "5.8.7",
             option2: "5.9.1",
             option3: "2",
@@ -212,7 +212,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "22. Can user-generated comments be moderated in WordPress?",
+            question: " Can user-generated comments be moderated in WordPress?",
             option1: "Yes",
             option2: "No",
             option3: "never",
@@ -222,7 +222,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "23. What are avatars in WordPress?",
+            question: " What are avatars in WordPress?",
             option1: "A small image that is displayed beside the name of the user",
             option2: "Name of creator",
             option3: "A 3D graphic of a user in WordPress",
@@ -232,7 +232,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "24. Where can you find permalink settings in WordPress?",
+            question: " Where can you find permalink settings in WordPress?",
             option1: "Setting -> Permalinks",
             option2: "About -> Permalinks",
             option3: "Tools -> Links -> Permalinks",
@@ -242,7 +242,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "25. Which of these is an option to set permalink in WordPress?",
+            question: " Which of these is an option to set permalink in WordPress?",
             option1: "Updating using day and name",
             option2: "Updating using month and name",
             option3: "Updating using number",
@@ -252,7 +252,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "26. Can plugin files be edited in WordPress?",
+            question: " Can plugin files be edited in WordPress?",
             option1: "Yes",
             option2: "No",
             option3: "very good",
@@ -262,7 +262,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "27. plugins in WordPress are used to ___?",
+            question: " plugins in WordPress are used to ___?",
             option1: "Easily modify, customize or enhance WordPress sites",
             option2: "Change UI of the dashboard",
             option3: "Add a new address to the website",
@@ -272,7 +272,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "28. All plugins installed on WordPress can be viewed at?",
+            question: " All plugins installed on WordPress can be viewed at?",
             option1: "plugins -> add plugin",
             option2: "settings -> plugin",
             option3: "plugins -> installed plugin",
@@ -282,7 +282,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "29. Is it required to activate the plugin after installing it?",
+            question: " Is it required to activate the plugin after installing it?",
             option1: "Yes",
             option2: "No",
             option3: "yes and no",
@@ -292,7 +292,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "30. Plugin update is used to ___?",
+            question: " Plugin update is used to ___?",
             option1: "Update some parts of plugins code based on the requirement.",
             option2: "Install an updated version",
             option3: "Add a new file to the plugin",
@@ -302,7 +302,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "31. Which of these plugins are used to check traffic on the WordPress website?",
+            question: " Which of these plugins are used to check traffic on the WordPress website?",
             option1: "All in One SEO",
             option2: "Yoast",
             option3: "Jet Pack",
@@ -312,7 +312,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "32. Which of these is an anti-spam plugin in WordPress?",
+            question: " Which of these is an anti-spam plugin in WordPress?",
             option1: "Akismet",
             option2: "BuddyPress",
             option3: "WP Forms",
@@ -322,7 +322,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "33. Is there any plugin that allows drag and drops for creating websites in WordPress?",
+            question: " Is there any plugin that allows drag and drops for creating websites in WordPress?",
             option1: "Yes",
             option2: "No",
             option3: "yes and No",
@@ -332,7 +332,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "34. Which of these is not a WordPress plugin for social media?",
+            question: " Which of these is not a WordPress plugin for social media?",
             option1: "WP Forms",
             option2: "Revive social",
             option3: "Smash Ballon",
@@ -342,7 +342,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "35. MailPoet plugin in WordPress used to?",
+            question: " MailPoet plugin in WordPress used to?",
             option1: "Read mails on WordPress",
             option2: "Send all info via mail in WordPress",
             option3: "Create and send the newsletter, welcome emails, etc from WordPress",
@@ -352,7 +352,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "36. Can the size of images be reduced in WordPress?",
+            question: " Can the size of images be reduced in WordPress?",
             option1: "Yes",
             option2: "No",
             option3: "does not support",
@@ -362,7 +362,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "37. Classic editor in WordPress is used to ___?",
+            question: " Classic editor in WordPress is used to ___?",
             option1: "Change editor UI to the old style",
             option2: "Add editor to WordPress site",
             option3: "Create a new editing site",
@@ -372,7 +372,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "38. Jetpack plugin in WordPress is used to ___?",
+            question: " Jetpack plugin in WordPress is used to ___?",
             option1: "Improve WordPress security",
             option2: "Increase website speed",
             option3: "Provide analytics of traffic on the site",
@@ -382,7 +382,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "39. Can you install plugins other than the ones present in the WordPress store?",
+            question: " Can you install plugins other than the ones present in the WordPress store?",
             option1: "Yes",
             option2: "No",
             option3: "let me google it",
@@ -392,7 +392,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "40. How to delete a WordPress plugin from WordPress?",
+            question: " How to delete a WordPress plugin from WordPress?",
             option1: "plugin -> installed plugin -> uninstall",
             option2: "plugin -> installed plugin -> deactivate -> uninstall",
             option3: "plugin -> plugin editor -> remove",
@@ -402,7 +402,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "41. Which file of WordPress themes can be skipped?",
+            question: " Which file of WordPress themes can be skipped?",
             option1: "index.php",
             option2: "function.php",
             option3: "comments.php",
@@ -412,7 +412,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "42. What are the different ways to change the customer's PHP version?",
+            question: " What are the different ways to change the customer's PHP version?",
             option1: "Run phphandler in EIG Shell",
             option2: "Login to Bluerock > Advanced > MultiPHP manager",
             option3: "Login to Bluerock > Advanced > MultiINI manager",
@@ -422,7 +422,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "43. Which of these plugins comes preinstalled on the WordPress site?",
+            question: " Which of these plugins comes preinstalled on the WordPress site?",
             option1: "Twenty Twenty-One",
             option2: "Magazine",
             option3: "Basic theme",
@@ -432,7 +432,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "44. Which of these features in WordPress is not a default one?",
+            question: " Which of these features in WordPress is not a default one?",
             option1: "Quick draft",
             option2: "View insights",
             option3: "Adding media",
@@ -442,7 +442,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "45. Can a theme other than the store be installed on WordPress sites?",
+            question: " Can a theme other than the store be installed on WordPress sites?",
             option1: "Yes",
             option2: "No",
             option3: "let me google it",
@@ -452,7 +452,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "46. Is it possible to display a static Page as a homepage in a WordPress website?",
+            question: " Is it possible to display a static Page as a homepage in a WordPress website?",
             option1: "Yes",
             option2: "No",
             option3: "let me google it",
@@ -462,7 +462,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "47. In WordPress themes can be edited using which of these options?",
+            question: " In WordPress themes can be edited using which of these options?",
             option1: "Using customize option",
             option2: "Editing theme code",
             option3: "Both A and B",
@@ -472,7 +472,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "48. Is it possible to program your WordPress theme?",
+            question: " Is it possible to program your WordPress theme?",
             option1: "Yes",
             option2: "No",
             option3: "let me google it",
@@ -482,7 +482,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "49. Which of these are built-in theme customization options in WordPress?",
+            question: " Which of these are built-in theme customization options in WordPress?",
             option1: "Changing site background",
             option2: "Changing site title",
             option3: "Updating copyright text in the footer",
@@ -492,7 +492,7 @@ const wordpressquestions = {
             time: 1
         },
         {
-            question: "50. Can the theme's source code be edited in WordPress?",
+            question: " Can the theme's source code be edited in WordPress?",
             option1: "Yes",
             option2: "No",
             option3: "let me google it",

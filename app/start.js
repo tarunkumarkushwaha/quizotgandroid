@@ -1,21 +1,18 @@
 // import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet, Image } from "react-native";
-import { DataContext } from "./_layout";
 import React, { useContext, useEffect, useState } from "react";
 import { View, Text, Button, Alert } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Picker } from "@react-native-picker/picker";
 import { useFocusEffect } from "@react-navigation/native";
+import { useSelector, useDispatch } from "react-redux";
+import { setstart, setaddResult } from "../store/quizSlice";
 
 export default function Start() {
-
-  const {
-    loading, 
-    setLoading,
-    setresult,
-    setstart,
-    result,
-  } = useContext(DataContext);
+  const [questionLength, setquestionLength] = useState(10)
+  const [maxquestionLength, setmaxquestionLength] = useState(10)
+  const result = useSelector((state) => state.quiz.result);
+  const dispatch = useDispatch();
   const navigation = useNavigation();
 
   const questionModules = {
@@ -31,52 +28,65 @@ export default function Start() {
     reasoning: () => import("../assets/questions/reasoningquestions"),
   };
 
+  function randomShuffle(array) {
+    const newArray = [];
+    const copyArray = [...array]; 
+    while (copyArray.length) {
+        const randomIndex = Math.floor(Math.random() * copyArray.length);
+        newArray.push(copyArray.splice(randomIndex, 1)[0]);
+    }
+    return newArray;
+}
+
   const loadQuestions = async () => {
     try {
-      setLoading(true);
       if (questionModules[result.subject]) {
         const module = await questionModules[result.subject]();
-        setresult((prevState) => ({
-          ...prevState,
-          TestQuestion: module.default,
-        }));
+        setmaxquestionLength(module.default.questions.length)
+        let slicedQuestions = module.default.questions.slice(0, questionLength)
+        dispatch(setaddResult({ TestQuestion: { time: parseInt(questionLength), questions: randomShuffle(slicedQuestions) } }));
       } else {
         Alert.alert("Notice", `No questions found for ${result.subject}`);
       }
     } catch (error) {
       console.error("Error loading questions:", error);
-    } finally {
-      setLoading(false);
     }
   };
 
   const startTest = async () => {
-    setresult((prevState) => ({
-      ...prevState,
+    dispatch(setaddResult({
       correctresponse: 0,
       incorrectresponse: 0,
     }));
+    // setresult((prevState) => ({
+    //   ...prevState,
+    //   correctresponse: 0,
+    //   incorrectresponse: 0,
+    // }));
     await loadQuestions();
-    setstart(true);
+    dispatch(setstart(true));
     navigation.navigate("test");
   };
 
   const pickerHandler = (value) => {
-    setresult((prevState) => ({
-      ...prevState,
+    dispatch(setaddResult({
       subject: value,
     }));
   };
 
   useEffect(() => {
     loadQuestions();
-  }, [result.subject]);
+  }, [result.subject, questionLength]);
 
   useFocusEffect(
     React.useCallback(() => {
       loadQuestions();
     }, [])
   );
+
+  let noarr = Array.from({ length: maxquestionLength }, (_, index) => index + 1)
+
+  // console.log(" questions", result.TestQuestion);
 
   return (
     <View style={styles.mainContainer}>
@@ -96,7 +106,7 @@ export default function Start() {
             onValueChange={pickerHandler}
             style={styles.picker}
           >
-            <Picker.Item label="General Knowlwdge" value="indianGK" />
+            <Picker.Item label="General Knowledge" value="indianGK" />
             <Picker.Item label="Math" value="math" />
             <Picker.Item label="Python" value="python" />
             <Picker.Item label="Science" value="science" />
@@ -108,9 +118,19 @@ export default function Start() {
             <Picker.Item label="WordPress" value="wordpress" />
           </Picker>
         </View>
+        <View style={styles.pickerContainer}>
+          <Text style={styles.label}>Question Length</Text>
+          <Picker
+            selectedValue={questionLength}
+            onValueChange={(value) => setquestionLength(value)}
+            style={styles.picker}
+          >
+            {noarr.map((num) => <Picker.Item key={num} label={num.toString()} value={num} />)}
+          </Picker>
+        </View>
 
         <View style={styles.buttonContainer}>
-          <Button title={loading ? "Loading..." : "Start Test"} onPress={startTest} color="#4CAF50" />
+          <Button title={"Start Test"} onPress={startTest} color="#4CAF50" />
         </View>
 
         <View style={styles.container}>
@@ -128,16 +148,10 @@ export default function Start() {
               Do not close the page during the test; it may cancel your test.
             </Text>
             <Text style={styles.listItem}>
-              Make sure your internet connection is stable to avoid disruptions.
-            </Text>
-            <Text style={styles.listItem}>
               Do not navigate to other pages or minimize screen
             </Text>
             <Text style={styles.listItem}>
-              Typing is not permitted, so do not use keyboard
-            </Text>
-            <Text style={styles.listItem}>
-              Follow all instructions provided by the test administrator.
+              Typing is not permitted, so do not use keyboard ( and you dont have one)
             </Text>
           </View>
         </View>

@@ -2,7 +2,7 @@ let pythonquestions = {
     time: 30, // in minutes
     questions: [
         {
-            question: "1. What is the output of the following code snippet: print(2 ** 3)?",
+            question: "What is the output of the following code snippet: print(2 ** 3)?",
             option1: "6",
             option2: "8",
             option3: "4",
@@ -11,7 +11,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "2. What is the keyword used to define a function in Python?",
+            question: "What is the keyword used to define a function in Python?",
             option1: "func",
             option2: "def",
             option3: "function",
@@ -20,7 +20,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "3. How do you create a list in Python?",
+            question: "How do you create a list in Python?",
             option1: "list()",
             option2: "[]",
             option3: "{}",
@@ -29,7 +29,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "4. Which of the following is the correct syntax to output the type of a variable?",
+            question: "Which of the following is the correct syntax to output the type of a variable?",
             option1: "print(type(variable))",
             option2: "print(variable.type())",
             option3: "print(variable.type)",
@@ -38,7 +38,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "5. What will be the output of the following code snippet: print('Hello' + ' ' + 'World')?",
+            question: "What will be the output of the following code snippet: print('Hello' + ' ' + 'World')?",
             option1: "Hello World",
             option2: "HelloWorld",
             option3: "Error",
@@ -47,7 +47,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "6. What data type is the object below: x = 'Hello'?",
+            question: "What data type is the object below: x = 'Hello'?",
             option1: "String",
             option2: "Integer",
             option3: "Float",
@@ -56,7 +56,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "7. How do you create a comment in Python?",
+            question: "How do you create a comment in Python?",
             option1: "// Comment",
             option2: "/* Comment */",
             option3: "# Comment",
@@ -65,7 +65,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "8. What will the following code print: print(10 // 3)?",
+            question: "What will the following code print: print(10 // 3)?",
             option1: "3",
             option2: "3.33",
             option3: "0",
@@ -74,7 +74,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "9. Which of the following functions is used to find the length of a list in Python?",
+            question: "Which of the following functions is used to find the length of a list in Python?",
             option1: "len()",
             option2: "size()",
             option3: "length()",
@@ -83,7 +83,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "10. What is the default value of an argument in a function?",
+            question: " What is the default value of an argument in a function?",
             option1: "None",
             option2: "0",
             option3: "False",
@@ -92,7 +92,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "11. What does the 'break' statement do in Python?",
+            question: " What does the 'break' statement do in Python?",
             option1: "Exits the loop",
             option2: "Continues to the next iteration",
             option3: "Exits the program",
@@ -101,7 +101,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "12. Which of the following is used to handle exceptions in Python?",
+            question: " Which of the following is used to handle exceptions in Python?",
             option1: "try-except",
             option2: "try-catch",
             option3: "error-handler",
@@ -110,7 +110,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "13. How do you create a dictionary in Python?",
+            question: " How do you create a dictionary in Python?",
             option1: "{}",
             option2: "[]",
             option3: "dict()",
@@ -119,7 +119,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "14. Which of the following will give an error in Python?",
+            question: " Which of the following will give an error in Python?",
             option1: "x = 10 + 2",
             option2: "x = 10 / 0",
             option3: "x = 5 * 3",
@@ -128,7 +128,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "15. What is the output of the following code snippet: print('5' * 3)?",
+            question: " What is the output of the following code snippet: print('5' * 3)?",
             option1: "15",
             option2: "555",
             option3: "Error",
@@ -137,7 +137,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "16. How do you define a variable in Python?",
+            question: " How do you define a variable in Python?",
             option1: "var x = 5",
             option2: "x := 5",
             option3: "x = 5",
@@ -146,7 +146,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "17. Which of the following is the correct syntax to import a module?",
+            question: " Which of the following is the correct syntax to import a module?",
             option1: "import module_name",
             option2: "include module_name",
             option3: "use module_name",
@@ -155,7 +155,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "18. What will be the output of the following code: print([1, 2, 3] + [4, 5])?",
+            question: " What will be the output of the following code: print([1, 2, 3] + [4, 5])?",
             option1: "[1, 2, 3, 4, 5]",
             option2: "[1, 2, 3, 4, 5, 6]",
             option3: "Error",
@@ -164,7 +164,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "19. Which operator is used to compare two values for equality in Python?",
+            question: " Which operator is used to compare two values for equality in Python?",
             option1: "==",
             option2: "=",
             option3: "===",
@@ -173,7 +173,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "20. What is the output of print(bool('False'))?",
+            question: " What is the output of print(bool('False'))?",
             option1: "False",
             option2: "True",
             option3: "Error",
@@ -182,7 +182,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "21. What type of object is returned by the input() function in Python?",
+            question: " What type of object is returned by the input() function in Python?",
             option1: "String",
             option2: "Integer",
             option3: "List",
@@ -191,7 +191,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "22. How do you check if a key exists in a Python dictionary?",
+            question: " How do you check if a key exists in a Python dictionary?",
             option1: "key in dictionary",
             option2: "dictionary.contains(key)",
             option3: "dictionary.has(key)",
@@ -200,7 +200,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "23. What does the 'continue' statement do in a loop?",
+            question: " What does the 'continue' statement do in a loop?",
             option1: "Exits the loop",
             option2: "Skips the current iteration and proceeds to the next one",
             option3: "Stops the program",
@@ -209,7 +209,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "24. How do you remove an item from a list in Python?",
+            question: " How do you remove an item from a list in Python?",
             option1: "remove()",
             option2: "del()",
             option3: "pop()",
@@ -218,7 +218,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "25. What does the zip() function do in Python?",
+            question: " What does the zip() function do in Python?",
             option1: "It joins two lists together",
             option2: "It creates a list of tuples from two lists",
             option3: "It compresses a list",
@@ -227,7 +227,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "26. What is the purpose of the pass statement in Python?",
+            question: " What is the purpose of the pass statement in Python?",
             option1: "It is used to exit a loop",
             option2: "It is used as a placeholder for future code",
             option3: "It stops the program",
@@ -236,7 +236,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "27. Which of the following is an immutable type in Python?",
+            question: " Which of the following is an immutable type in Python?",
             option1: "List",
             option2: "Dictionary",
             option3: "String",
@@ -245,7 +245,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "28. How do you define a class in Python?",
+            question: " How do you define a class in Python?",
             option1: "class MyClass()",
             option2: "class MyClass",
             option3: "MyClass class",
@@ -254,7 +254,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "29. What does the 'self' keyword represent in Python?",
+            question: " What does the 'self' keyword represent in Python?",
             option1: "The current object",
             option2: "The current function",
             option3: "The current class",
@@ -263,7 +263,7 @@ let pythonquestions = {
             time: 1,
         },
         {
-            question: "30. How can you concatenate two strings in Python?",
+            question: " How can you concatenate two strings in Python?",
             option1: "Using + operator",
             option2: "Using * operator",
             option3: "Using concat() function",

@@ -3,7 +3,7 @@ let javascriptquestions =
     time : 30 , //in minutes
     questions: [
         {
-            question: "1. What will be the output of the following code snippet var a = \"Scaler\" \n var result = a.substring(2, 4)\ndocument.write(result)",
+            question: "What will be the output of the following code snippet var a = \"Scaler\" \n var result = a.substring(2, 4)\ndocument.write(result)",
             option1: "calculate by your self, i can't do it",
             option2: "cal",
             option3: "al",
@@ -12,7 +12,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "2. What will be the output of the following code snippet console.log(halwa)",
+            question: "What will be the output of the following code snippet console.log(halwa)",
             option1: "no halwa available !, please order on swiggy",
             option2: "halwa is not defined",
             option3: "no output",
@@ -21,7 +21,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "3. Pick the wrong",
+            question: "Pick the wrong",
             option1: "Primitive data types can store only a single value.",
             option2: "To store multiple and complex values, non-primitive data types are used",
             option3: "Object is a primitive data type",
@@ -30,7 +30,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "4. Pick the correct one",
+            question: "Pick the correct one",
             option1: " == is used to compare values while === is used to compare values and data type both",
             option2: "To store multiple and complex values, non-primitive data types are used",
             option3: "Object is a primitive data type",
@@ -39,7 +39,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "5. JavaScript is a ______ language.",
+            question: "JavaScript is a ______ language.",
             option1: "boolean",
             option2: "statically typed language",
             option3: "very very very 100X tough",
@@ -48,7 +48,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "6. What is IIFE in JavaScript.",
+            question: "What is IIFE in JavaScript.",
             option1: "Award show to feature best JS devoloper",
             option2: " Immediately Invoked Function(IIFE) is a function that runs as soon as it is defined.",
             option3: "Immediately Invoked Function(IIFE) is a function to listen events",
@@ -57,7 +57,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "7. What do you mean by strict mode in javascript and characteristics of javascript strict-mode",
+            question: "What do you mean by strict mode in javascript and characteristics of javascript strict-mode",
             option1: "It is a new feature by which all forms of errors, including silent errors, will be thrown. As a result, debugging becomes a lot simpler.",
             option2: "it is a react component helps to render app and jsx",
             option3: "It is a feature which is only used in reactjs in rendering components",
@@ -66,7 +66,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "8. What signifies the difference between Java and JavaScript?",
+            question: "What signifies the difference between Java and JavaScript?",
             option1: "Java creates applications that can run in any virtual machine (JVM) or browser while JavaScript was made as a programming language to make web pages interactive",
             option2: "javascript is a part of java to make web apps",
             option3: "Let me google it, i will find it on stackoverflow",
@@ -75,7 +75,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "9. Pick the wrong one",
+            question: "Pick the wrong one",
             option2: "When a number is added to a string, the number type is always converted to the number type.",
             option1: "false, 0, 0n, -0, “”, null, undefined, and NaN are falsey values",
             option3: "OR (||) operator - If the first value is truthy, then the first value is returned. Otherwise, always the second value gets returned.",
@@ -84,7 +84,7 @@ let javascriptquestions =
             time: 2
         },
         {
-            question: "10. Which can used to access HTML elements using Javascript??",
+            question: " Which can used to access HTML elements using Javascript??",
             option1: "document.queryselector",
             option2: "document.getElementbyID",
             option3: "document.getElementById",
@@ -93,7 +93,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "11. typeof of NaN will return a Number.",
+            question: " typeof of NaN will return a Number.",
             option1: "To check if a value is NaN, we use the isNaN() function",
             option2: "NaN means not a number so NaN will not return a number",
             option3: "typeof NaN will not work on NaN",
@@ -102,7 +102,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "12. Functions that are used as an argument to another function are called callback functions.",
+            question: " Functions that are used as an argument to another function are called callback functions.",
             option1: "Callback functions are always cause callback hell",
             option2: "Functions that are used as an argument to another function are called fNfunctions.",
             option3: "Callback functions are constructor functions, which are used to create objects in javascript.",
@@ -111,7 +111,7 @@ let javascriptquestions =
             time: 1
         }
         ,{
-            question: "13. what is output of function add(num1, num2) {return arguments[0] + arguments[1];} and const add (num1, num2) =>{return arguments[0] + arguments[1];} for add(2,3)?",
+            question: " what is output of function add(num1, num2) {return arguments[0] + arguments[1];} and const add (num1, num2) =>{return arguments[0] + arguments[1];} for add(2,3)?",
             option1: "5,5",
             option2: "5,arguments not defined",
             option3: "arguments not defined,arguments not defined",
@@ -120,7 +120,7 @@ let javascriptquestions =
             time: 1
         },
         {
-            question: "14. What will be the output of console.log(typeof null)?",
+            question: " What will be the output of console.log(typeof null)?",
             option1: "object",
             option2: "null",
             option3: "undefined",
@@ -129,7 +129,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "15. Which method converts a JSON object to a string?",
+            question: " Which method converts a JSON object to a string?",
             option1: "JSON.stringify()",
             option2: "JSON.parse()",
             option3: "JSON.toString()",
@@ -138,7 +138,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "16. How can you create a new array from an existing array in ES6?",
+            question: " How can you create a new array from an existing array in ES6?",
             option1: "Using push()",
             option2: "Using slice()",
             option3: "Using spread operator [...]",
@@ -147,7 +147,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "17. What is the result of '5' - 2?",
+            question: " What is the result of '5' - 2?",
             option1: "3",
             option2: "'3'",
             option3: "'52'",
@@ -156,7 +156,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "18. Which statement is true about const in JavaScript?",
+            question: " Which statement is true about const in JavaScript?",
             option1: "It creates a mutable reference to a value.",
             option2: "It creates an immutable reference to a value.",
             option3: "It prevents objects from being modified.",
@@ -165,7 +165,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "19. What does the '===' operator check?",
+            question: " What does the '===' operator check?",
             option1: "Value only",
             option2: "Data type only",
             option3: "Both value and data type",
@@ -174,7 +174,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "20. What will the following code log? console.log(0.1 + 0.2 === 0.3);",
+            question: " What will the following code log? console.log(0.1 + 0.2 === 0.3);",
             option1: "true",
             option2: "false",
             option3: "undefined",
@@ -183,7 +183,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "21. What is a closure in JavaScript?",
+            question: " What is a closure in JavaScript?",
             option1: "A function combined with its lexical environment",
             option2: "A loop inside a function",
             option3: "A function without a return value",
@@ -192,7 +192,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "22. How do you declare a JavaScript function?",
+            question: " How do you declare a JavaScript function?",
             option1: "function myFunction()",
             option2: "function = myFunction()",
             option3: "function:myFunction()",
@@ -201,7 +201,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "23. What is the output of console.log(2 + '2')?",
+            question: " What is the output of console.log(2 + '2')?",
             option1: "22",
             option2: "4",
             option3: "'2'",
@@ -210,7 +210,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "24. Which of the following is not a JavaScript framework?",
+            question: " Which of the following is not a JavaScript framework?",
             option1: "React",
             option2: "Angular",
             option3: "Vue",
@@ -219,7 +219,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "25. How do you remove the first element of an array in JavaScript?",
+            question: " How do you remove the first element of an array in JavaScript?",
             option1: "array.pop()",
             option2: "array.shift()",
             option3: "array.splice(0, 1)",
@@ -228,7 +228,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "26. What is the purpose of the isNaN function?",
+            question: " What is the purpose of the isNaN function?",
             option1: "To check if a value is a number",
             option2: "To check if a value is not a number",
             option3: "To convert a value to a number",
@@ -237,7 +237,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "27. Which array method is used to add elements to the end of an array?",
+            question: " Which array method is used to add elements to the end of an array?",
             option1: "push()",
             option2: "pop()",
             option3: "unshift()",
@@ -246,7 +246,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "28. What will console.log(typeof NaN) output?",
+            question: " What will console.log(typeof NaN) output?",
             option1: "undefined",
             option2: "object",
             option3: "number",
@@ -255,7 +255,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "29. Which JavaScript keyword is used to define variables?",
+            question: " Which JavaScript keyword is used to define variables?",
             option1: "var",
             option2: "let",
             option3: "const",
@@ -264,7 +264,7 @@ let javascriptquestions =
             time: 1,
         },
         {
-            question: "30. How can you check if an object has a property in JavaScript?",
+            question: " How can you check if an object has a property in JavaScript?",
             option1: "object.exists('property')",
             option2: "property in object",
             option3: "object.has('property')",
