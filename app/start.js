@@ -26,6 +26,7 @@ export default function Start() {
     python: () => import("../assets/questions/pythonquestions"),
     science: () => import("../assets/questions/sciencequestions"),
     reasoning: () => import("../assets/questions/reasoningquestions"),
+    funny: () => import("../assets/questions/funnyquestions"),
   };
 
   function randomShuffle(array) {
@@ -58,11 +59,6 @@ export default function Start() {
       correctresponse: 0,
       incorrectresponse: 0,
     }));
-    // setresult((prevState) => ({
-    //   ...prevState,
-    //   correctresponse: 0,
-    //   incorrectresponse: 0,
-    // }));
     await loadQuestions();
     dispatch(setstart(true));
     navigation.navigate("test");
@@ -110,6 +106,7 @@ export default function Start() {
             <Picker.Item label="Math" value="math" />
             <Picker.Item label="Python" value="python" />
             <Picker.Item label="Science" value="science" />
+            <Picker.Item label="funny" value="funny" />
             <Picker.Item label="Reasoning" value="reasoning" />
             <Picker.Item label="HTML" value="html" />
             <Picker.Item label="CSS" value="css" />

@@ -42,7 +42,7 @@ const Result = () => {
     }, [])
   );
 
-  console.log(pastresult.TestQuestion.questions.length,"past result")
+  // console.log(pastresult.TestQuestion.questions.length,"past result")
 
   return (
     <View style={[styles.container]}>
