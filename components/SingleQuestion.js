@@ -1,13 +1,14 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 
-const SingleQuestion = ({ question, response, setresponse, disabled }) => {
+const SingleQuestion = ({ question, response, setresponse, disabled, questionNO }) => {
   const responseHandler = (value) => {
     setresponse(value);
   };
 
   return question && (
     <View style={styles.container}>
+      <Text style={styles.questionText}>{`Question no - ${questionNO}`}</Text>
       <Text style={styles.questionText}>{question.question}</Text>
 
       <View style={styles.optionContainer}>

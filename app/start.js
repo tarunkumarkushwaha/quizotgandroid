@@ -44,8 +44,8 @@ export default function Start() {
       if (questionModules[result.subject]) {
         const module = await questionModules[result.subject]();
         setmaxquestionLength(module.default.questions.length)
-        let slicedQuestions = module.default.questions.slice(0, questionLength)
-        dispatch(setaddResult({ TestQuestion: { time: parseInt(questionLength), questions: randomShuffle(slicedQuestions) } }));
+        let slicedQuestions = randomShuffle(module.default.questions).slice(0, questionLength)
+        dispatch(setaddResult({ TestQuestion: { time: parseInt(questionLength), questions: slicedQuestions } }));
       } else {
         Alert.alert("Notice", `No questions found for ${result.subject}`);
       }
@@ -224,13 +224,7 @@ const styles = StyleSheet.create({
     padding: 24,
     marginTop: 24,
     borderRadius: 12,
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
+    boxShadow: "0px 2px 3.84px rgba(0, 0, 0, 0.25)",
     elevation: 5,
   },
   title: {

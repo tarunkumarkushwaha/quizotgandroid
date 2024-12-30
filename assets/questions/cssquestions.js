@@ -163,8 +163,6 @@ let cssquestions = {
             correctresponse: "text-align: center;",
             time: 1,
         },
-
-        // Add more if needed.
     ],
 };
 

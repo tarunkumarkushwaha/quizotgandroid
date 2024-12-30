@@ -2,7 +2,7 @@ let mathquestions = {
     time: 30, // in minutes
     questions: [
         {
-            question: "What is the value of (2 + 3) × (4 + 5)?",
+            question: "What is the value of (2 + 3) x (4 + 5)?",
             option1: "45",
             option2: "20",
             option3: "50",
@@ -11,7 +11,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "What is the value of 7 × (4 + 6) ÷ 2?",
+            question: "What is the value of 7 x (4 + 6) ÷ 2?",
             option1: "35",
             option2: "28",
             option3: "30",
@@ -38,7 +38,7 @@ let mathquestions = {
             time: 2,
         },
         {
-            question: "What is the value of (8 ÷ 2) × (2 + 2)?",
+            question: "What is the value of (8 ÷ 2) x (2 + 2)?",
             option1: "16",
             option2: "32",
             option3: "8",
@@ -56,7 +56,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: "What is the value of (3 × 4) + (5 × 6) ÷ 3?",
+            question: "What is the value of (3 x 4) + (5 x 6) ÷ 3?",
             option1: "32",
             option2: "30",
             option3: "28",
@@ -155,7 +155,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: " What is the value of 5 × (2 + 3) ÷ 5?",
+            question: " What is the value of 5 x (2 + 3) ÷ 5?",
             option1: "2",
             option2: "5",
             option3: "3",
@@ -182,7 +182,7 @@ let mathquestions = {
             time: 1,
         },
         {
-            question: " What is the value of 12 × (5 - 2)?",
+            question: " What is the value of 12 x (5 - 2)?",
             option1: "36",
             option2: "30",
             option3: "40",
@@ -200,7 +200,7 @@ let mathquestions = {
             time: 2,
         },
         {
-            question: " What is the value of 7 × (3 + 4)?",
+            question: " What is the value of 7 x (3 + 4)?",
             option1: "49",
             option2: "56",
             option3: "63",

@@ -118,6 +118,7 @@ const Test = () => {
             <SingleQuestion
               question={result.TestQuestion.questions[questionNO]}
               disabled={disabled}
+              questionNO={questionNO}
               response={response}
               setresponse={setresponse}
             />
