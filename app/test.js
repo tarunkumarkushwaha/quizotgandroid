@@ -62,13 +62,15 @@ const Test = () => {
   };
 
   const yourNext = () => {
-    checkanswer();
-    setDisabled(false);
-    setresponse("");
-    if (questionNO < result.TestQuestion.questions.length - 1) {
+
+    if (questionNO + 1 < result.TestQuestion.questions.length - 1) {
       setQuestionNO((prev) => prev + 1);
+      response && checkanswer();
+      setDisabled(false);
+      setresponse("");
     } else {
       Alert.alert("Last Question", "This is the last question.");
+      // console.log("last questions")
     }
   };
 
@@ -96,7 +98,7 @@ const Test = () => {
   };
 
   const finalSubmit = (remainingTime = 0) => {
-    checkanswer();
+    response && checkanswer();
     updateTimeLeft(remainingTime);
     Alert.alert("Success", "Test submitted successfully");
     setstart(false);

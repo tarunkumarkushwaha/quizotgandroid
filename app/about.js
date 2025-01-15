@@ -2,18 +2,17 @@ import { Image, StyleSheet } from "react-native";
 import React from "react";
 import { View, Text, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
-import { useSelector } from "react-redux";
+import { useRouter } from "expo-router";
+// import FileUploadComponent from "../components/FileUploadComponent";
+// import { useSelector } from "react-redux";
 
-export default function HomeScreen() {
-  const signIn = useSelector((state) => state.quiz.signIn);
+export default function AboutScreen() {
+//   const signIn = useSelector((state) => state.quiz.signIn);
   const navigation = useNavigation();
+  const router = useRouter();
 
-  const TestSetting = () => {
-    navigation.navigate("start");
-  };
-
-  const goToAboutPage = () => {
-    navigation.navigate("about");
+  const goToHomePage = () => {
+    router.dismissAll();
   };
 
   return (
@@ -29,25 +28,21 @@ export default function HomeScreen() {
       <View style={styles.overlay} />
       <Text style={styles.logoText}>QUIZOTG</Text>
       <View style={styles.contentContainer}>
-        <Text style={styles.title}>Welcome to QuizOTG!</Text>
-        <Text style={styles.description}>
-          Master your knowledge with our diverse range of quizzes and challenges. Choose your subject, and dive into a world of quizzes designed to challenge. Start exploring now and unlock your potential!
-        </Text>
+      <Text style={styles.title}>About QuizOTG</Text>
+      <Text style={styles.description}>
+        QuizOTG is your ultimate quiz companion, designed to help you explore your skills, or simply having fun,
+      </Text>
+      <Text style={styles.title}>Features:</Text>
+      <Text style={styles.description}>- Diverse quizzes across multiple categories</Text>
+      <Text style={styles.description}>- User-friendly interface</Text>
+      <Text style={styles.description}>- No ads</Text>
+      {/* <Text style={styles.description}>Thank you for choosing QuizOTG!</Text> */}
       </View>
 
       {/* Buttons */}
       <View style={styles.buttonContainer}>
-        {signIn ? (
-          <TouchableOpacity onPress={TestSetting} style={styles.startTestButton}>
-            <Text style={styles.buttonText}>Start Test</Text>
-          </TouchableOpacity>
-        ) : (
-          <TouchableOpacity onPress={() => console.log("More details")} style={styles.moreDetailsButton}>
-            <Text style={styles.buttonText}>Click for more detail</Text>
-          </TouchableOpacity>
-        )}
-        <TouchableOpacity onPress={goToAboutPage} style={styles.aboutButton}>
-          <Text style={styles.aboutButtonText}>About</Text>
+        <TouchableOpacity onPress={goToHomePage} style={styles.aboutButton}>
+          <Text style={styles.aboutButtonText}>Back To home</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -130,17 +125,16 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   aboutButton: {
-    backgroundColor: "rgba(0, 0, 0, 0)",
-    paddingVertical: 6,
+    backgroundColor: "white",
+    paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 25,
     alignItems: "center",
     boxShadow: "0px 3px 5px rgba(0, 0, 0, 0.3)",
   },
   aboutButtonText: {
-    color: "white",
-    textDecorationLine: "underline",
-    fontSize: 14,
+    fontSize: 18,
     fontWeight: "bold",
   },
 });
+

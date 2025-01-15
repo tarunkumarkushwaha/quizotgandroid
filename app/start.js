@@ -1,19 +1,23 @@
 // import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet, Image } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, Button, Alert } from "react-native";
+import { View, Text, Button, Alert, TouchableOpacity } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Picker } from "@react-native-picker/picker";
 import { useFocusEffect } from "@react-navigation/native";
 import { useSelector, useDispatch } from "react-redux";
 import { setstart, setaddResult } from "../store/quizSlice";
+import { useRouter } from "expo-router";
+import FileUploadComponent from "../components/FileUploadComponent";
 
 export default function Start() {
   const [questionLength, setquestionLength] = useState(10)
+  const [customQuestion, setcustomQuestion] = useState(false)
   const [maxquestionLength, setmaxquestionLength] = useState(10)
   const result = useSelector((state) => state.quiz.result);
   const dispatch = useDispatch();
   const navigation = useNavigation();
+  const router = useRouter();
 
   const questionModules = {
     javascript: () => import("../assets/questions/javascriptquestions"),
@@ -31,16 +35,19 @@ export default function Start() {
 
   function randomShuffle(array) {
     const newArray = [];
-    const copyArray = [...array]; 
+    const copyArray = [...array];
     while (copyArray.length) {
-        const randomIndex = Math.floor(Math.random() * copyArray.length);
-        newArray.push(copyArray.splice(randomIndex, 1)[0]);
+      const randomIndex = Math.floor(Math.random() * copyArray.length);
+      newArray.push(copyArray.splice(randomIndex, 1)[0]);
     }
     return newArray;
-}
+  }
 
   const loadQuestions = async () => {
     try {
+      if (result.subject == "custom") {
+        return
+      }
       if (questionModules[result.subject]) {
         const module = await questionModules[result.subject]();
         setmaxquestionLength(module.default.questions.length)
@@ -65,6 +72,9 @@ export default function Start() {
   };
 
   const pickerHandler = (value) => {
+    if (value == "custom") {
+      setcustomQuestion(true)
+    } else { setcustomQuestion(false) }
     dispatch(setaddResult({
       subject: value,
     }));
@@ -77,6 +87,7 @@ export default function Start() {
   useFocusEffect(
     React.useCallback(() => {
       loadQuestions();
+      setcustomQuestion(false)
     }, [])
   );
 
@@ -93,6 +104,13 @@ export default function Start() {
         style={styles.backgroundImage}
         resizeMode="cover"
       />
+      {/* <TouchableOpacity onPress={() => router.dismissAll()} style={styles.backButton}> */}
+      <TouchableOpacity onPress={() => router.dismissAll()} style={styles.backButton}>
+        <Image
+          source={{ uri: "https://img.icons8.com/stickers/50/back.png" }}
+          style={{ width: 25, height: 25 }}
+        />
+      </TouchableOpacity>
       <Text style={styles.header}>Test Settings</Text>
       <View style={styles.settingsContainer}>
         <View style={styles.pickerContainer}>
@@ -113,9 +131,10 @@ export default function Start() {
             <Picker.Item label="JavaScript" value="javascript" />
             <Picker.Item label="React" value="react" />
             <Picker.Item label="WordPress" value="wordpress" />
+            <Picker.Item label="custom questions" value="custom" />
           </Picker>
         </View>
-        <View style={styles.pickerContainer}>
+        {!customQuestion ? <View style={styles.pickerContainer}>
           <Text style={styles.label}>Question Length</Text>
           <Picker
             selectedValue={questionLength}
@@ -125,12 +144,15 @@ export default function Start() {
             {noarr.map((num) => <Picker.Item key={num} label={num.toString()} value={num} />)}
           </Picker>
         </View>
+          :
+          <FileUploadComponent randomShuffle={randomShuffle} setmaxquestionLength={setmaxquestionLength} />
+        }
 
-        <View style={styles.buttonContainer}>
-          <Button title={"Start Test"} onPress={startTest} color="#4CAF50" />
-        </View>
+        <TouchableOpacity onPress={startTest} style={styles.button}>
+          <Text style={styles.buttonText}>Start Test</Text>
+        </TouchableOpacity>
 
-        <View style={styles.container}>
+        {!customQuestion && <View style={styles.container}>
           <Text style={styles.title}>Test Rules</Text>
           <View style={styles.listContainer}>
             <Text style={styles.listItem}>
@@ -151,13 +173,25 @@ export default function Start() {
               Typing is not permitted, so do not use keyboard ( and you dont have one)
             </Text>
           </View>
-        </View>
+        </View>}
       </View>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
+  button: {
+    backgroundColor: "#008000",
+    padding: 15,
+    borderRadius: 8,
+    margin: 10,
+    alignItems: "center",
+},
+buttonText: {
+    color: "#fff",
+    fontSize: 16,
+    fontWeight: "bold",
+},
   backgroundImage: {
     position: "absolute",
     top: 0,
@@ -173,50 +207,44 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#282c34",
     justifyContent: "center",
-    padding: 20,
+    alignItems: "center",
   },
   header: {
     fontSize: 24,
     fontWeight: "bold",
     textAlign: "center",
     marginVertical: 20,
-    color: "#fffff",
+    color: "#FFFFFF",
+    textShadowColor: "rgba(0, 0, 0, 0.5)",
+    textShadowOffset: { width: 1, height: 1 },
+    textShadowRadius: 3,
   },
 
   settingsContainer: {
     backgroundColor: "#333",
     borderRadius: 10,
     padding: 20,
+    width: "90%",
+    maxWidth: 400,
+    alignItems: "center",
   },
   pickerContainer: {
     marginVertical: 10,
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
+    width: "100%",
   },
   label: {
     color: "#ffffff",
     marginBottom: 5,
-    textAlign: "center",
+    textAlign: "left",
+    width: "100%",
   },
   picker: {
     height: 50,
-    width: "90%",
+    width: "100%",
     color: "#ffffff",
     backgroundColor: "#555",
     borderRadius: 5,
-    marginVertical: 5,
-  },
-
-  buttonContainer: {
-    marginTop: 20,
-    // alignItems: "center",
-  },
-
-  notAvailableText: {
-    textAlign: "center",
-    color: "#cccccc",
-    marginVertical: 10,
+    paddingHorizontal: 10,
   },
 
   container: {
@@ -224,8 +252,10 @@ const styles = StyleSheet.create({
     padding: 24,
     marginTop: 24,
     borderRadius: 12,
-    boxShadow: "0px 2px 3.84px rgba(0, 0, 0, 0.25)",
-    elevation: 5,
+    shadowColor: "#000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
   },
   title: {
     fontSize: 18,
@@ -234,9 +264,19 @@ const styles = StyleSheet.create({
     textAlign: "center",
   },
   listContainer: {
-    textAlign: "center",
+    marginTop: 10,
   },
   listItem: {
     marginBottom: 8,
+    color: "#333",
+    textAlign: "left",
+  },
+  backButton: {
+    position: "absolute",
+    top: 15,
+    left: 10,
+    padding: 10,
+    zIndex: 10,
   },
 });
+
