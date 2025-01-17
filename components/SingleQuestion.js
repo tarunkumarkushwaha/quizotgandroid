@@ -76,7 +76,7 @@ const SingleQuestion = ({ question, response, setresponse, disabled, questionNO 
       maxWidth: '100%',
     },
     selectedOption: {
-      backgroundColor: '#98FB98',
+      backgroundColor: '#e4eb88',
     },
     correctOption: {
       backgroundColor: '#90EE90',
@@ -84,7 +84,7 @@ const SingleQuestion = ({ question, response, setresponse, disabled, questionNO 
     optionText: {
       fontSize: 18,
       color: '#333',
-      flexShrink: 1, // Prevent text overflow
+      flexShrink: 1, 
     },
     correctText: {
       color: 'green',

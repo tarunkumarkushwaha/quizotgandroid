@@ -149,10 +149,18 @@ const Result = () => {
                   </View>
                   <View style={styles.resultText}>
                     <Text style={{ color: !dark ? "#ffffff" : "#333" }}>
-                      Time taken:{" "}
+                      Time left:{" "}
                       <Text style={styles.value}>
                         {`${pastresult.timeLeft.min} min : ${result.timeLeft.sec === 0 ? "00" : result.timeLeft.sec
                           } sec`}
+                      </Text>
+                    </Text>
+                  </View>
+                  <View style={styles.resultText}>
+                    <Text style={{ color: !dark ? "#ffffff" : "#333" }}>
+                      Total Time:{" "}
+                      <Text style={styles.value}>
+                        {`${pastresult.TestQuestion.time} min `}
                       </Text>
                     </Text>
                   </View>

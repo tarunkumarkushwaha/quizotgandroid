@@ -7,9 +7,7 @@ import {
     StyleSheet,
     Alert,
     TouchableOpacity,
-    SafeAreaView,
     Modal,
-    Platform
 } from "react-native";
 import * as DocumentPicker from 'expo-document-picker';
 import * as FileSystem from 'expo-file-system';
@@ -86,7 +84,7 @@ export default function UploadQuestions({ setmaxquestionLength, randomShuffle })
         const valid = [];
         const invalid = [];
 
-        const normalizeKey = (key) => key.toLowerCase(); // Normalize keys for case-insensitive comparison
+        const normalizeKey = (key) => key.toLowerCase(); 
         const normalizedSchema = schema.map(normalizeKey);
 
         data.forEach((row, index) => {
@@ -114,7 +112,7 @@ export default function UploadQuestions({ setmaxquestionLength, randomShuffle })
                         error: `Row ${index + 1}: One or more options are missing or incorrect.`,
                     });
                 } else {
-                    valid.push(row); // Add original row to valid data
+                    valid.push(row); 
                 }
             } else {
                 invalid.push({
@@ -126,7 +124,7 @@ export default function UploadQuestions({ setmaxquestionLength, randomShuffle })
 
         setValidData(valid);
         setInvalidData(invalid);
-        // console.log(valid)
+        // console.log(invalid)
 
         if (invalid.length > 0) {
             Alert.alert("Validation Complete", `${invalid.length} invalid rows found.`);
@@ -148,7 +146,7 @@ export default function UploadQuestions({ setmaxquestionLength, randomShuffle })
         <View style={styles.safeArea}>
             <Text style={styles.header}>Upload Questions</Text>
             <TouchableOpacity onPress={handleUpload} style={styles.button}>
-                <Text style={styles.buttonText}>Upload File</Text>
+                <Text style={styles.buttonText}>Upload CSV/JSON File</Text>
             </TouchableOpacity>
             {!validData.length > 0 && <TouchableOpacity style={styles.button} onPress={handleGenerateCsvInfo}>
                 <Text style={styles.buttonText}>How to Generate CSV?</Text>

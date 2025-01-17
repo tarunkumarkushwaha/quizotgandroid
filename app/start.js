@@ -1,7 +1,7 @@
 // import Ionicons from "@expo/vector-icons/Ionicons";
 import { StyleSheet, Image } from "react-native";
 import React, { useContext, useEffect, useState } from "react";
-import { View, Text, Button, Alert, TouchableOpacity } from "react-native";
+import { View, Text, Button, Alert, TouchableOpacity, TextInput } from "react-native";
 import { useNavigation } from "@react-navigation/native";
 import { Picker } from "@react-native-picker/picker";
 import { useFocusEffect } from "@react-navigation/native";
@@ -15,9 +15,17 @@ export default function Start() {
   const [customQuestion, setcustomQuestion] = useState(false)
   const [maxquestionLength, setmaxquestionLength] = useState(10)
   const result = useSelector((state) => state.quiz.result);
+  const savedCustomQuestions = useSelector((state) => state.quiz.CustomQuestions);
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const router = useRouter();
+  const [value, setValue] = useState(10);
+
+  const handleChange = (text) => {
+    // Only allow numeric input
+    const numericValue = text.replace(/[^0-9]/g, '');
+    setValue(numericValue);
+  };
 
   const questionModules = {
     javascript: () => import("../assets/questions/javascriptquestions"),
@@ -52,7 +60,8 @@ export default function Start() {
         const module = await questionModules[result.subject]();
         setmaxquestionLength(module.default.questions.length)
         let slicedQuestions = randomShuffle(module.default.questions).slice(0, questionLength)
-        dispatch(setaddResult({ TestQuestion: { time: parseInt(questionLength), questions: slicedQuestions } }));
+        dispatch(setaddResult({ TestQuestion: { time: parseInt(value), questions: slicedQuestions } }));
+        setValue(parseInt(questionLength));
       } else {
         Alert.alert("Notice", `No questions found for ${result.subject}`);
       }
@@ -69,6 +78,9 @@ export default function Start() {
     await loadQuestions();
     dispatch(setstart(true));
     navigation.navigate("test");
+    if (result.subject == "custom" && savedCustomQuestions.length <= 0) {
+      Alert.alert("No inputs custom questions", "questions set to general knowledge questions")
+    }
   };
 
   const pickerHandler = (value) => {
@@ -93,14 +105,12 @@ export default function Start() {
 
   let noarr = Array.from({ length: maxquestionLength }, (_, index) => index + 1)
 
-  // console.log(" questions", result.TestQuestion);
+  console.log(" questions", value);
 
   return (
     <View style={styles.mainContainer}>
       <Image
-        source={{
-          uri: "https://cdn.pixabay.com/photo/2017/02/05/04/24/question-2039124_1280.jpg",
-        }}
+        source={require("../assets/images/mainbg.jpg")}
         style={styles.backgroundImage}
         resizeMode="cover"
       />
@@ -134,6 +144,17 @@ export default function Start() {
             <Picker.Item label="custom questions" value="custom" />
           </Picker>
         </View>
+
+        <Text style={styles.label}>Time</Text>
+        <TextInput
+          style={styles.input}
+          value={value}
+          defaultValue={questionLength}
+          onChangeText={handleChange}
+          keyboardType="numeric"
+          placeholder={value.toString()}
+          placeholderTextColor="#aaa"
+        />
         {!customQuestion ? <View style={styles.pickerContainer}>
           <Text style={styles.label}>Question Length</Text>
           <Picker
@@ -163,15 +184,15 @@ export default function Start() {
               Once you move to the next question, you cannot return to the
               previous one.
             </Text>
-            <Text style={styles.listItem}>
+            {/* <Text style={styles.listItem}>
               Do not close the page during the test; it may cancel your test.
-            </Text>
-            <Text style={styles.listItem}>
+            </Text> */}
+            {/* <Text style={styles.listItem}>
               Do not navigate to other pages or minimize screen
             </Text>
             <Text style={styles.listItem}>
               Typing is not permitted, so do not use keyboard ( and you dont have one)
-            </Text>
+            </Text> */}
           </View>
         </View>}
       </View>
@@ -180,18 +201,33 @@ export default function Start() {
 }
 
 const styles = StyleSheet.create({
+  label: {
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginBottom: 5,
+    color: '#333',
+  },
+  input: {
+    width: "100%",
+    height: 50,
+    borderRadius: 8,
+    paddingHorizontal: 15,
+    fontSize: 16,
+    color:"white",
+    backgroundColor: '#575654',
+  },
   button: {
     backgroundColor: "#008000",
     padding: 15,
     borderRadius: 8,
     margin: 10,
     alignItems: "center",
-},
-buttonText: {
+  },
+  buttonText: {
     color: "#fff",
     fontSize: 16,
     fontWeight: "bold",
-},
+  },
   backgroundImage: {
     position: "absolute",
     top: 0,

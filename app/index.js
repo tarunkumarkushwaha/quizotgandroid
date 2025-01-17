@@ -19,9 +19,7 @@ export default function HomeScreen() {
   return (
     <View style={styles.mainContainer}>
       <Image
-        source={{
-          uri: "https://cdn.pixabay.com/photo/2017/02/05/04/24/question-2039124_1280.jpg",
-        }}
+        source={require("../assets/images/mainbg.jpg")}
         style={styles.backgroundImage}
         resizeMode="cover"
       />
@@ -29,9 +27,9 @@ export default function HomeScreen() {
       <View style={styles.overlay} />
       <Text style={styles.logoText}>QUIZOTG</Text>
       <View style={styles.contentContainer}>
-        <Text style={styles.title}>Welcome to QuizOTG!</Text>
+        {/* <Text style={styles.title}>Welcome to QuizOTG!</Text> */}
         <Text style={styles.description}>
-          Master your knowledge with our diverse range of quizzes and challenges. Choose your subject, and dive into a world of quizzes designed to challenge. Start exploring now and unlock your potential!
+          Dive into a world of quizzes designed to challenge.
         </Text>
       </View>
 
