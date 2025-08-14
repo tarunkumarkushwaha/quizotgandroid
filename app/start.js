@@ -58,7 +58,7 @@ export default function Start() {
   const GenerateQuestion = () => {
     setLoading(true);
 
-    fetch(`https://quiztimequestionapi.onrender.com/ask?prompt=${questionGenerateInputText}_${questionLength}_questions`)
+    fetch(`https://quiztimequestionapi.onrender.com/ask?prompt=${encodeURIComponent(questionGenerateInputText)}&count=${questionLength}`)
       .then(response => response.json())
       .then(data => {
         console.log(data)
@@ -89,7 +89,7 @@ export default function Start() {
   };
 
 
-const loadQuestions = async () => {
+  const loadQuestions = async () => {
     try {
       if (result.subject === "custom") {
         setquestionGenerateInput(false);
@@ -136,14 +136,14 @@ const loadQuestions = async () => {
         const length = Math.min(questionLength, availableLength);
         const slicedQuestions = randomShuffle(module.default.questions).slice(0, length);
 
-        dispatch(setaddResult({ 
-          TestQuestion: { 
-            time: parseInt(value, 10) || 10, 
-            questions: slicedQuestions 
-          } 
+        dispatch(setaddResult({
+          TestQuestion: {
+            time: parseInt(value, 10) || 10,
+            questions: slicedQuestions
+          }
         }));
       } else {
-        result.subject !== "generate question" && 
+        result.subject !== "generate question" &&
           Alert.alert("Notice", `No questions found for ${result.subject}`);
       }
     } catch (error) {
