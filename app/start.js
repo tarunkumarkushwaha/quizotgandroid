@@ -355,6 +355,7 @@ const styles = StyleSheet.create({
 
   mainContainer: {
     flex: 1,
+    overflow:"scroll",
     backgroundColor: "#282c34",
     justifyContent: "center",
     alignItems: "center",
@@ -371,6 +372,7 @@ const styles = StyleSheet.create({
   },
 
   settingsContainer: {
+    // overflow:"scroll",
     backgroundColor: "#333",
     borderRadius: 10,
     padding: 20,
@@ -399,8 +401,8 @@ const styles = StyleSheet.create({
 
   container: {
     backgroundColor: "#f2f2f2",
-    padding: 24,
-    marginTop: 24,
+    padding: 16,
+    marginTop: 12,
     borderRadius: 12,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },
@@ -410,14 +412,14 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 18,
     fontWeight: "bold",
-    marginBottom: 16,
+    marginBottom: 12,
     textAlign: "center",
   },
   listContainer: {
     marginTop: 10,
   },
   listItem: {
-    marginBottom: 8,
+    marginBottom: 5,
     color: "#333",
     textAlign: "left",
   },
