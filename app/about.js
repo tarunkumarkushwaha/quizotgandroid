@@ -33,6 +33,7 @@ export default function AboutScreen() {
         QuizOTG is your ultimate quiz companion, designed to help you explore your skills, or simply having fun,
       </Text>
       <Text style={styles.title}>Features:</Text>
+      <Text style={styles.description}>- Generate your questions powered by gemini AI</Text>
       <Text style={styles.description}>- Custom test with your questions</Text>
       <Text style={styles.description}>- Diverse quizzes across multiple categories</Text>
       <Text style={styles.description}>- User-friendly interface</Text>

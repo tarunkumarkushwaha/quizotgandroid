@@ -19,7 +19,11 @@ export default function Start() {
   const dispatch = useDispatch();
   const navigation = useNavigation();
   const router = useRouter();
-  const [value, setValue] = useState(10);
+  const [value, setValue] = useState("10");
+  const [questionGenerateInput, setquestionGenerateInput] = useState(false);
+  const [questionGenerateInputText, setquestionGenerateInputText] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [error, seterror] = useState("");
 
   const handleChange = (text) => {
     // Only allow numeric input
@@ -51,36 +55,125 @@ export default function Start() {
     return newArray;
   }
 
-  const loadQuestions = async () => {
+  const GenerateQuestion = () => {
+    setLoading(true);
+
+    fetch(`https://quiztimequestionapi.onrender.com/ask?prompt=${questionGenerateInputText}_${questionLength}_questions`)
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+        if (data) {
+          dispatch(setaddResult({
+            TestQuestion: {
+              time: parseInt(data.time, 10) || 10,
+              questions: data.question
+            }
+          }));
+          setValue(String(data.time || 10));
+          Alert.alert("Rejoice", `Question Generated`);
+        } else {
+          Alert.alert("Error", "No questions returned from AI");
+        }
+      })
+      .catch(error => {
+        let errStr = String(error);
+        if (errStr.length > 30) {
+          errStr = errStr.slice(0, 50) + "...";
+        }
+        seterror(errStr);
+        Alert.alert("Please wait for 30sec", `AI waking up`);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
+
+
+const loadQuestions = async () => {
     try {
-      if (result.subject == "custom") {
-        return
+      if (result.subject === "custom") {
+        setquestionGenerateInput(false);
+        return;
       }
+
+      if (result.subject === "generate question") {
+        setquestionGenerateInput(true);
+        setLoading(true);
+        fetch(`https://quiztimequestionapi.onrender.com/questions/javascriptquestions`)
+          .then(response => response.json())
+          .then(data => {
+            console.log(data, "waking up");
+            seterror("");
+          })
+          .catch(error => {
+            console.error(error);
+            let errStr = String(error);
+            const displayErr = errStr.length > 50 ? errStr.slice(0, 50) + "..." : errStr;
+            seterror(displayErr);
+            Alert.alert("Oops", displayErr);
+          })
+          .finally(() => {
+            setLoading(false);
+          });
+        return;
+      }
+
       if (questionModules[result.subject]) {
-        const module = await questionModules[result.subject]();
-        setmaxquestionLength(module.default.questions.length)
-        let slicedQuestions = randomShuffle(module.default.questions).slice(0, questionLength)
-        dispatch(setaddResult({ TestQuestion: { time: parseInt(value), questions: slicedQuestions } }));
-        setValue(parseInt(questionLength));
+        setquestionGenerateInput(false);
+
+        let module;
+        try {
+          module = await questionModules[result.subject]();
+        } catch (err) {
+          console.error("Error importing questions:", err);
+          Alert.alert("Error", "Unable to load questions for " + result.subject);
+          return;
+        }
+
+        const availableLength = module.default.questions.length;
+        setmaxquestionLength(availableLength);
+
+        const length = Math.min(questionLength, availableLength);
+        const slicedQuestions = randomShuffle(module.default.questions).slice(0, length);
+
+        dispatch(setaddResult({ 
+          TestQuestion: { 
+            time: parseInt(value, 10) || 10, 
+            questions: slicedQuestions 
+          } 
+        }));
       } else {
-        Alert.alert("Notice", `No questions found for ${result.subject}`);
+        result.subject !== "generate question" && 
+          Alert.alert("Notice", `No questions found for ${result.subject}`);
       }
     } catch (error) {
       console.error("Error loading questions:", error);
     }
   };
 
+
   const startTest = async () => {
+    // Check for empty custom questions before navigation
+    if (result.subject === "custom" && savedCustomQuestions.length <= 0) {
+      Alert.alert("No custom questions", "Switching to General Knowledge questions");
+      dispatch(setaddResult({ subject: "indianGK" }));
+      await loadQuestions();
+    }
+
+    // Prevent AI test start without generated questions
+    if (result.subject === "generate question" && !result.TestQuestion?.questions?.length) {
+      Alert.alert("Please generate questions first");
+      return;
+    }
+
     dispatch(setaddResult({
       correctresponse: 0,
       incorrectresponse: 0,
     }));
+
     await loadQuestions();
     dispatch(setstart(true));
     navigation.navigate("test");
-    if (result.subject == "custom" && savedCustomQuestions.length <= 0) {
-      Alert.alert("No inputs custom questions", "questions set to general knowledge questions")
-    }
   };
 
   const pickerHandler = (value) => {
@@ -98,14 +191,14 @@ export default function Start() {
 
   useFocusEffect(
     React.useCallback(() => {
-      loadQuestions();
+      // loadQuestions();
       setcustomQuestion(false)
     }, [])
   );
 
   let noarr = Array.from({ length: maxquestionLength }, (_, index) => index + 1)
 
-  console.log(" questions", value);
+  // console.log(" questions", value);
 
   return (
     <View style={styles.mainContainer}>
@@ -130,6 +223,7 @@ export default function Start() {
             onValueChange={pickerHandler}
             style={styles.picker}
           >
+            <Picker.Item label="Generate Questions" value="generate question" />
             <Picker.Item label="General Knowledge" value="indianGK" />
             <Picker.Item label="Math" value="math" />
             <Picker.Item label="Python" value="python" />
@@ -149,7 +243,7 @@ export default function Start() {
         <TextInput
           style={styles.input}
           value={value}
-          defaultValue={questionLength}
+          // defaultValue={questionLength}
           onChangeText={handleChange}
           keyboardType="numeric"
           placeholder={value.toString()}
@@ -168,8 +262,25 @@ export default function Start() {
           :
           <FileUploadComponent randomShuffle={randomShuffle} setmaxquestionLength={setmaxquestionLength} />
         }
+        {questionGenerateInput &&
+          <>
+            {loading ? <Text style={styles.label}>Generate Questions</Text> :
+              <Text style={styles.label}>Generate Questions</Text>}
+            <TextInput
+              style={styles.input}
+              value={questionGenerateInputText}
+              // defaultValue={questionLength}
+              onChangeText={(val) => setquestionGenerateInputText(val.split(" ").join("_"))}
+              placeholder={"Generate questions via AI"}
+              placeholderTextColor="#aaa"
+            />
+            <TouchableOpacity disabled={loading} onPress={GenerateQuestion} style={styles.button}>
+              <Text style={styles.buttonText}>{loading ? "Please wait..." : "Generate Question"}</Text>
+            </TouchableOpacity>
+          </>
+        }
 
-        <TouchableOpacity onPress={startTest} style={styles.button}>
+        <TouchableOpacity disabled={loading} onPress={startTest} style={styles.button}>
           <Text style={styles.buttonText}>Start Test</Text>
         </TouchableOpacity>
 
@@ -177,8 +288,11 @@ export default function Start() {
           <Text style={styles.title}>Test Rules</Text>
           <View style={styles.listContainer}>
             <Text style={styles.listItem}>
-              Test has a specified time limit. Ensure to complete it within the
-              given time.
+              For AI generated questions first click on generate, after generating
+              click on start test
+            </Text>
+            <Text style={styles.listItem}>
+              Test has a specified time limit.
             </Text>
             <Text style={styles.listItem}>
               Once you move to the next question, you cannot return to the
@@ -213,7 +327,7 @@ const styles = StyleSheet.create({
     borderRadius: 8,
     paddingHorizontal: 15,
     fontSize: 16,
-    color:"white",
+    color: "white",
     backgroundColor: '#575654',
   },
   button: {
