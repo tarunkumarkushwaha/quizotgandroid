@@ -63,14 +63,13 @@ const Test = () => {
 
   const yourNext = () => {
 
-    if (questionNO + 1 < result.TestQuestion.questions.length - 1) {
+    if (questionNO + 1 < result.TestQuestion.questions.length) {
       setQuestionNO((prev) => prev + 1);
       response && checkanswer();
       setDisabled(false);
       setresponse("");
     } else {
       Alert.alert("Last Question", "This is the last question.");
-      // console.log("last questions")
     }
   };
 

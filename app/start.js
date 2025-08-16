@@ -270,7 +270,7 @@ export default function Start() {
               style={styles.input}
               value={questionGenerateInputText}
               // defaultValue={questionLength}
-              onChangeText={(val) => setquestionGenerateInputText(val.split(" ").join("_"))}
+              onChangeText={(val) => setquestionGenerateInputText(val)}
               placeholder={"Generate questions via AI"}
               placeholderTextColor="#aaa"
             />
